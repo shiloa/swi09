@@ -2,8 +2,8 @@ from django.shortcuts import render_to_response, HttpResponse, HttpResponseRedir
 from django.template import RequestContext
 from django.utils.translation import check_for_language
 from pdb import set_trace as debugger
-from theapp.forms import UserInfoForm
-from theapp.models import *
+from swi09.theapp.forms import UserInfoForm
+from swi09.theapp.models import *
 
 def plans(request):
 
