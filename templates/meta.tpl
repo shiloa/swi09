@@ -3,7 +3,7 @@
 <meta content="INDEX,FOLLOW" name="ROBOTS"/>
 <meta content="" name="description"/>
 <meta content="" name="keywords"/>
-<meta content="Bilha Ayalon" name="Author"/>
-<meta content="Bilha Ayalon" name="copyright"/>
+<meta content="Some Site" name="Author"/>
+<meta content="Some Site" name="copyright"/>
 <!--<link rel="icon" type="image/png" href="/static/images/shuky-icon.png"></link>
 <link rel="shortcut icon" href="/static/images/shuky-icon.png"></link>-->

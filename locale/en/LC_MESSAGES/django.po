@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-17 11:07+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: settings.py:34
+msgid "Hebrew"
+msgstr ""
+
+#: settings.py:35
+msgid "English"
+msgstr ""
+
+#: templates/base.tpl:7 templates/nav.tpl:9
+msgid "Home"
+msgstr ""
+
+#: templates/base.tpl:7
+msgid "Bilha Ayalon"
+msgstr ""
+
+#: templates/construction.tpl:5
+msgid "Frier - Under Construction"
+msgstr ""
+
+#: templates/construction.tpl:80
+msgid "The Site is Under Construction..."
+msgstr ""
+
+#: templates/construction.tpl:83
+msgid "See you soon!"
+msgstr ""
+
+#: templates/languages.tpl:9
+msgid "go"
+msgstr ""
+
+#: templates/nav.tpl:3
+msgid "Contact"
+msgstr ""
+
+#: templates/nav.tpl:5
+msgid "Gallery"
+msgstr ""
+
+#: templates/nav.tpl:7
+msgid "About"
+msgstr ""

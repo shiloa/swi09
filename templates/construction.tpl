@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-        <title>{% trans "Bilha Ayalon - Under Construction" %}</title>
+        <title>{% trans "Frier - Under Construction" %}</title>
         <style type="text/css" media="screen">
             body {
                 padding: 0;
