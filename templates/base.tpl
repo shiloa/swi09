@@ -4,7 +4,7 @@
 <html {% if LANGUAGE_BIDI %}dir="rtl"{% endif %} lang="{{ LANGUAGE_CODE }}">
     <head>
         {% include "meta.tpl" %}
-        <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "Bilha Ayalon" %}</title>
+        <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "Some Site" %}</title>
         <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
         <link rel="stylesheet" href="/static/css/lightbox.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
     </head>

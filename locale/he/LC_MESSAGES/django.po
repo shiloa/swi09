@@ -29,8 +29,8 @@ msgid "Home"
 msgstr "דף הבית"
 
 #: templates/base.tpl:7
-msgid "Bilha Ayalon"
-msgstr ""
+msgid "Some Site"
+msgstr "אתר כלשהו"
 
 #: templates/construction.tpl:5
 msgid "Frier - Under Construction"
