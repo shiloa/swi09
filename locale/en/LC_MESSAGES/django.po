@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 11:07+0200\n"
+"POT-Creation-Date: 2009-12-17 15:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,38 +24,62 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: templates/base.tpl:7 templates/nav.tpl:9
-msgid "Home"
+#: theapp/models.py:10
+msgid "company name"
 msgstr ""
 
-#: templates/base.tpl:7
-msgid "Bilha Ayalon"
+#: theapp/models.py:28
+msgid "plan name"
 msgstr ""
 
-#: templates/construction.tpl:5
-msgid "Frier - Under Construction"
+#: theapp/models.py:29
+msgid "number of base minutes in plan"
 msgstr ""
 
-#: templates/construction.tpl:80
-msgid "The Site is Under Construction..."
+#: theapp/models.py:30
+msgid "plan's flat rate (before additional costs)"
 msgstr ""
 
-#: templates/construction.tpl:83
-msgid "See you soon!"
+#: theapp/models.py:31
+msgid "number of included text messages in plan"
 msgstr ""
 
-#: templates/languages.tpl:9
-msgid "go"
+#: theapp/models.py:32
+msgid "additional plan info"
 msgstr ""
 
-#: templates/nav.tpl:3
-msgid "Contact"
+#: theapp/models.py:33
+msgid "company"
 msgstr ""
 
-#: templates/nav.tpl:5
-msgid "Gallery"
+#: theapp/models.py:34
+msgid "plan active?"
 msgstr ""
 
-#: templates/nav.tpl:7
-msgid "About"
+#: theapp/models.py:50
+msgid "Text Message"
+msgstr ""
+
+#: theapp/models.py:50
+msgid "Plan Minutes"
+msgstr ""
+
+#: theapp/models.py:52
+msgid "step classification"
+msgstr ""
+
+#: theapp/models.py:53
+msgid "unit cost in this step"
+msgstr ""
+
+#: theapp/models.py:54
+msgid "plan for this pricing step"
+msgstr ""
+
+#: theapp/models.py:55
+msgid "pricing starts at (number)"
+msgstr ""
+
+#: theapp/models.py:56
+msgid "pricing ends at (number)"
 msgstr ""
