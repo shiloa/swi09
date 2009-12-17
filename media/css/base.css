@@ -1,0 +1,102 @@
+.no-underline {
+    text-decoration: none;
+}
+.tiny {
+    font-size: 9pt;
+}
+body {
+    text-align: center;
+    padding: 0;
+    background-image: url('/static/images/bg-pink.png');
+    background-position: top;
+    background-repeat: repeat-x;
+}
+/*
+    dark purple - rgb(122, 5, 126);
+    light purple - rgb(220, 188, 238);
+    blue - rgb(100, 93, 255);
+    lightblue - rgb(166, 162, 255);
+*/
+/*
+#mask-top, #mask-bottom {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+#mask-top {
+    top: 0;
+}
+
+#mask-bottom {
+    bottom: 0;
+    background-image: url('/static/images/bg-pink-inv.png');
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+*/
+
+#content {
+/*    width: 1024px;*/
+    width: 95%;
+    height: 740px;
+/*    border: 1px solid #666;*/
+    margin: 0 auto;
+}
+
+#language-links {
+    float: left;
+}
+
+#nav {
+    float: left;
+    height: 2em;
+    margin-top: 120px;
+}
+
+.nav-link {
+    color: rgb(100, 93, 255);
+    margin: 0.5em 10px;
+    padding: 0 10px;
+    text-decoration: none;
+    float: left;
+    position: relative;
+/*    font-weight: bolder;*/
+}
+
+.nav-link:hover {
+    text-decoration: underline;  
+}
+
+.nav-sep {
+    width: 4px;
+    height: 2em;   
+    background-color: rgb(122, 5, 126);
+    float: left;
+    position: relative;
+}
+
+#logo-text {
+    float: right;
+}
+
+#logo-image {
+    float: left;
+}
+
+#language-form input, #language-form select {
+    font-size: 8pt;
+    background-color: rgb(220, 188, 238);
+    border: 1px solid rgb(122, 5, 126);
+}
+
+#main-content {
+    border: 1px solid #bfbfbf;
+    width: 40%;
+    height: 50%;
+    float: right;
+    clear: both;
+    font-size: 11pt;
+    padding: 1em;
+}
