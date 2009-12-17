@@ -2,8 +2,8 @@ from django.shortcuts import render_to_response, HttpResponse, HttpResponseRedir
 from django.template import RequestContext
 from django.utils.translation import check_for_language
 from pdb import set_trace as debugger
-from theapp.forms import UserInfoForm
-from theapp.models import *
+from swi09.theapp.forms import UserInfoForm
+from swi09.theapp.models import *
 
 def plans(request):
 
@@ -39,8 +39,6 @@ def graphs(request):
     if not request.method == 'GET':
         raise Http404
  
-    print request.GET
-
     # Get the requested column info
     column_map = { "cost" : (0, 2000), "minutes": (0, 60 * 10), "sms": (0, 500) }  
     req = request.GET.get("type", "")
@@ -79,8 +77,6 @@ def graphs(request):
 
         result += "%d," % count
 
-        print "%d - %d = %d" % (lstart, lend, count)
-
     result = result[:-1] + ":%d" % user_column
     
     return HttpResponse(result)
@@ -91,11 +87,8 @@ def graphs(request):
 def home_page(request):
     """renders the home page of the site"""
     if request.method == 'POST':
-        print "whaa"
-        print request.POST
         form = UserInfoForm(request.POST)
         if form.is_valid():
-            print 'Saving !!'
             form.save()
             return HttpResponseRedirect("/")
     else:

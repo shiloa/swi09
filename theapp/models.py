@@ -53,13 +53,11 @@ class Plan(models.Model):
             else:
                 item = minutes
 
-#            print "%d - %d = %f  (%d)" % (step.starts_at, step.ends_at, step.unit_cost, item)
             if item> step.starts_at:
                 amount = step.ends_at if item > step.ends_at else item
                 amount -= step.starts_at
                 total += amount * step.unit_cost
         
-#               print 'Hit: %d (%f) = %f' % (amount, step.unit_cost, amount * step.unit_cost)
         return total
         
     class Meta:
