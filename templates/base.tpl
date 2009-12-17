@@ -1,16 +1,12 @@
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> -->
 {% load i18n %}
 <html {% if LANGUAGE_BIDI %}dir="rtl"{% endif %} lang="{{ LANGUAGE_CODE }}">
     <head>
         {% include "meta.tpl" %}
         <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "Some Site" %}</title>
-        <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" title="no title"
         <link rel="shortcut icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg">
-        <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"> charset="utf-8"></link>
+        <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"></link>
     </head>
-    <body id="index">
-            {% include "languages.tpl" %}
+    <body>
             {# {% include "nav.tpl" %} #}
             {% block main %}{% endblock %}
         {% block footer %}
@@ -28,4 +24,5 @@
       <script type="text/javascript" charset="utf-8">
       </script>
     {% endblock %}
+    {% include "languages.tpl" %}
 </html>

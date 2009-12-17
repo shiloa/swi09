@@ -86,9 +86,14 @@ def home_page(request):
     """renders the home page of the site"""
     if request.method == 'POST':
         form = UserInfoForm(request.POST)
+        debugger()
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/")
+            cost = form.cleaned_data['cost']
+            sms = form.cleaned_data['sms']
+            minutes = form.cleaned_data['minutes']
+            get_string = "?sms=%s&minutes=%s&cost=%s" % (sms, minutes, cost)
+            return HttpResponseRedirect("/plans/%s" % get_string)
     else:
         form = UserInfoForm()
 
