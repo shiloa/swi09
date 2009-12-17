@@ -24,7 +24,6 @@ def read_csv(file_path):
             else:
                 company = company[0]# plan
             
-            debugger
             # add plan
             plan = form_plan(row)
             plan.company_id= company.id
@@ -55,25 +54,6 @@ def form_plan(row):
     
     return plan
 
-"""
-company	
-plan	
-new_flat_rate	
-plan_included_min --> base min
-first_step_starts_at --> plan.step1.starts_at
-first_step_cost	 --> plan.step.unit_cost
-second_step_start --> plan.step1.ends_at = plan.step2.starts_at
-second_step_cost --> plan.step1.unit_cost
-pkg_includes_sms --> base_sms	
-sms_beyond_pkg 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
-
-classification = models.CharField(max_length=45, verbose_name=_(u'step classification'), choices=zip(STEP_TYPES, STEP_TYPES))
-unit_cost = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_(u'unit cost in this step'))
-plan = models.ForeignKey('Plan', verbose_name=_(u'plan for this pricing step'))
-starts_at = models.IntegerField(verbose_name=_(u'pricing starts at (number)'))
-ends_at = models.IntegerField(verbose_name=_(u'pricing ends at (number)'))
-
-"""
 def add_steps(row, plan):
     STEP_TYPES = ( u'Plan Text Message', u'Plan Minutes', )
     

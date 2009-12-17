@@ -82,8 +82,6 @@ def graphs(request):
     return HttpResponse(result)
 
 
-
-
 def home_page(request):
     """renders the home page of the site"""
     if request.method == 'POST':
@@ -94,7 +92,7 @@ def home_page(request):
     else:
         form = UserInfoForm()
 
-    return render_to_response('index.tpl', { 'form':form }, context_instance=RequestContext(request))
+    return render_to_response('home.tpl', { 'form' : form }, context_instance=RequestContext(request))
 
 def under_construction(request):
     """the classic 'site is under construction' page"""

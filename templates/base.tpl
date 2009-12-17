@@ -5,33 +5,23 @@
     <head>
         {% include "meta.tpl" %}
         <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "Some Site" %}</title>
-        <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
-        <link rel="stylesheet" href="/static/css/lightbox.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
+        <link rel="stylesheet" href="/static/css/base.css" type="text/css" media="screen" title="no title"
+        <link rel="shortcut icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg">
+        <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"> charset="utf-8"></link>
     </head>
     <body id="index">
-          <!--<div id="mask-top"></div>
-          <div id="mask-bottom"></div>-->
-          <div id="content">
-              <div id="banner">
-                <a href="{% url home_page %}" class="no-underline">
-                  <img id="logo-text" border="0" src="/static/images/bilha-text.png" />
-                  <img id="logo-image" border="0" src="/static/images/bilha-logo.png" />
-                </a>
-                {% include "languages.tpl" %}
-              </div>
-            {% include "nav.tpl" %}
+            {% include "languages.tpl" %}
+            {# {% include "nav.tpl" %} #}
             {% block main %}{% endblock %}
-        </div>
         {% block footer %}
-        {# {% include "languages.tpl" %} #}
           <div id="footer"></div>
         {% endblock %}
     </body>
     {% block javascript %}
-        <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+        {# <script src="/static/js/jquery.min.js" type="text/javascript"></script> #}
         <script src="/static/js/jquery.ui.min.js" type="text/javascript"></script>
         <script src="/static/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="/static/js/jquery.lightbox.js" type="text/javascript"></script>
         <script src="/static/js/site.js" type="text/javascript"></script>
     {% endblock %}
     {% block pagescript %}
