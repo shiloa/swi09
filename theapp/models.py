@@ -27,8 +27,10 @@ class Plan(models.Model):
     
     name = models.CharField(max_length=50, verbose_name=_(u'plan name'))
     base_minutes = models.IntegerField(verbose_name=_(u'number of base minutes in plan'))
-    flat_rate = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_(u'plan\'s flat rate (before additional costs)'))
+    flat_rate = models.DecimalField(max_digits=10, decimal_places=3, verbose_name=_(u'plan\'s flat rate (before additional costs) in NIS'))
     base_sms = models.IntegerField(verbose_name=_(u'number of included text messages in plan'))
+    base_sms_rate = models.DecimalField(max_digits=10, decimal_places=3, verbose_name=_(u'price/sms in NIS'))
+    base_min_rate = models.DecimalField(max_digits=10, decimal_places=3, verbose_name=_(u'price/min in NIS'))
     details = models.CharField(max_length=256, verbose_name=_(u'additional plan info'), blank=True)
     company = models.ForeignKey('Company', verbose_name=_(u'company'))
     is_active = models.BooleanField(verbose_name=_(u'plan active?'), default=True)
@@ -69,13 +71,13 @@ class Step(models.Model):
     STEP_TYPES = (_(u'Plan Text Message'), _(u'Plan Minutes'), )
     
     classification = models.CharField(max_length=45, verbose_name=_(u'step classification'), choices=zip(STEP_TYPES, STEP_TYPES))
-    unit_cost = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_(u'unit cost in this step'))
+    unit_cost = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_(u'unit cost in this step'))
     plan = models.ForeignKey('Plan', verbose_name=_(u'plan for this pricing step'))
     starts_at = models.IntegerField(verbose_name=_(u'pricing starts at (number)'))
     ends_at = models.IntegerField(verbose_name=_(u'pricing ends at (number)'))
     
     def __unicode__(self):
-        return self.plan.name
+        return self.classification
         
     class Meta:
         db_table = 'steps'
