@@ -3,7 +3,36 @@ from django.template import RequestContext
 from django.utils.translation import check_for_language
 from pdb import set_trace as debugger
 from theapp.forms import UserInfoForm
-from theapp.models import UserInfo
+from theapp.models import *
+
+def plans(request):
+
+    if request.method != 'GET':
+        raise Http404
+
+    minutes = request.GET.get('minutes', 'bad')
+    sms = request.GET.get('sms', 'bad')
+    price = request.GET.get('price', 'bad')
+
+    try:
+        minutes = int(minutes)
+        sms = int(sms)
+        price = int(price)
+    except ValueError:
+        raise Http404
+
+    plans = best_plans(sms, minutes, price)
+
+    return render_to_response('plans.tpl', {'plans':plans, 'price':price, }, context_instance=RequestContext(request))
+
+
+def best_plans(sms, minutes, price):
+    results = []
+    for plan in Plan.objects.filter(is_active=True):
+        plan_price = plan.my_price(sms, minutes)
+        results.append((plan_price, price - plan_price if price > plan_price else 0, plan))
+
+    return sorted(results)[0:4]
 
 STEPS = 5
 def graphs(request):

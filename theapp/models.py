@@ -38,6 +38,27 @@ class Plan(models.Model):
     
     def _get_plan_steps(self):
         return self.step_set.all()
+    steps = property(_get_plan_steps)
+
+    def my_price(self, sms, minutes):
+        ''' Calcuate the plan's cost for a specific sms/minutes combo '''
+        total = self.flat_rate
+        
+        for step in self.steps:
+
+            if step.classification == Step.STEP_TYPES[0]:
+                item = sms 
+            else:
+                item = minutes
+
+#            print "%d - %d = %f  (%d)" % (step.starts_at, step.ends_at, step.unit_cost, item)
+            if item> step.starts_at:
+                amount = step.ends_at if item > step.ends_at else item
+                amount -= step.starts_at
+                total += amount * step.unit_cost
+        
+#               print 'Hit: %d (%f) = %f' % (amount, step.unit_cost, amount * step.unit_cost)
+        return total
         
     class Meta:
         db_table = 'plans'
