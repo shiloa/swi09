@@ -68,7 +68,7 @@ class Step(models.Model):
     """describes a plan's barrier after which cost is raised"""
     
     # plan step is either of the following types
-    STEP_TYPES = (_(u'Text Message'), _(u'Plan Minutes'), )
+    STEP_TYPES = (_(u'Plan Text Message'), _(u'Plan Minutes'), )
     
     classification = models.CharField(max_length=45, verbose_name=_(u'step classification'), choices=zip(STEP_TYPES, STEP_TYPES))
     unit_cost = models.DecimalField(max_digits=5, decimal_places=2, verbose_name=_(u'unit cost in this step'))
