@@ -14,6 +14,9 @@ urlpatterns = patterns('',
     # under contstruction
     (r'^$', 'swi09.theapp.views.under_construction', {}, 'home_page'),
     
+    # Ajax grapths
+    (r'^graphs$', 'swi09.theapp.views.graphs', {}, 'home_page'),
+    
     # site media
     (r'^static/(.*)$',  serve, { 'document_root': os.path.join(DOC_ROOT,'media/') }),
     
