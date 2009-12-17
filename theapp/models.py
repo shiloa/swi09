@@ -61,4 +61,18 @@ class Step(models.Model):
     class Meta:
         db_table = 'steps'
         ordering = ['classification']
-    
+
+
+class UserInfo(models.Model):
+    ''' User usage information '''
+    company = models.ForeignKey(Company)
+    minutes = models.PositiveIntegerField()
+    sms = models.PositiveIntegerField()
+    cost = models.PositiveIntegerField()
+    phone = models.PositiveIntegerField(null=True, blank=True)
+    sent_to_agent = models.SmallIntegerField(max_length=1, default=0, null=True, blank=True)
+
+    def __unicode__(self):
+        return u'%d at %s' % (self.cost, self.company)
+
+
