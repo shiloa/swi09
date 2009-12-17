@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 11:07+0200\n"
+"POT-Creation-Date: 2009-12-17 15:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,38 +24,62 @@ msgstr "עברית"
 msgid "English"
 msgstr "אנגלית"
 
-#: templates/base.tpl:7 templates/nav.tpl:9
-msgid "Home"
-msgstr "דף הבית"
+#: theapp/models.py:10
+msgid "company name"
+msgstr "שם החברה"
 
-#: templates/base.tpl:7
-msgid "Some Site"
-msgstr "אתר כלשהו"
+#: theapp/models.py:28
+msgid "plan name"
+msgstr "שם התכנית"
 
-#: templates/construction.tpl:5
-msgid "Frier - Under Construction"
-msgstr "האתר בבניה"
+#: theapp/models.py:29
+msgid "number of base minutes in plan"
+msgstr "מספר דקות כלולות בתכנית"
 
-#: templates/construction.tpl:80
-msgid "The Site is Under Construction..."
-msgstr "האתר בבנייה..."
+#: theapp/models.py:30
+msgid "plan's flat rate (before additional costs)"
+msgstr "המחיר הבסיסי של התכנית (לפני עלויות נוספות)"
 
-#: templates/construction.tpl:83
-msgid "See you soon!"
-msgstr "נתראה בקרוב!"
+#: theapp/models.py:31
+msgid "number of included text messages in plan"
+msgstr "מספר הודעות טקסט הכלולות בתכנית"
 
-#: templates/languages.tpl:9
-msgid "go"
-msgstr "קדימה"
+#: theapp/models.py:32
+msgid "additional plan info"
+msgstr "מידע נוסף אודות התכנית"
 
-#: templates/nav.tpl:3
-msgid "Contact"
-msgstr "צור קשר"
+#: theapp/models.py:33
+msgid "company"
+msgstr "שם החברה"
 
-#: templates/nav.tpl:5
-msgid "Gallery"
-msgstr ""
+#: theapp/models.py:34
+msgid "plan active?"
+msgstr "התכנית עדכנית?"
 
-#: templates/nav.tpl:7
-msgid "About"
-msgstr ""
+#: theapp/models.py:50
+msgid "Text Message"
+msgstr "הודעת טקסט"
+
+#: theapp/models.py:50
+msgid "Plan Minutes"
+msgstr "דקות בתכנית"
+
+#: theapp/models.py:52
+msgid "step classification"
+msgstr "סיווג מדרגות"
+
+#: theapp/models.py:53
+msgid "unit cost in this step"
+msgstr "עלות יחידה במדרגה זו"
+
+#: theapp/models.py:54
+msgid "plan for this pricing step"
+msgstr "התכנית למדרגה זו"
+
+#: theapp/models.py:55
+msgid "pricing starts at (number)"
+msgstr "תמחור מתחיל ב-"
+
+#: theapp/models.py:56
+msgid "pricing ends at (number)"
+msgstr "תמחור מסתיים ב-"
