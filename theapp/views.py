@@ -22,7 +22,10 @@ def plans(request):
         raise Http404
 
     plans = best_plans(sms, minutes, price)
-    saved = True if plans[0][0] < price else False
+    saved = price - plans[0][0]
+    if saved < 0:
+        saved = 0
+
     return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved }, context_instance=RequestContext(request))
 
 
