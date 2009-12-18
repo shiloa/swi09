@@ -99,9 +99,9 @@ margin-right:115px;
       }
       
 #progress-inner {
-        height: 0%;
+        height: 100%;
         display: none;
-background-color:white;
+        background-color:white;
 
       } 
 .title {
@@ -227,6 +227,7 @@ font-size:30px;
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8">
     $( function(){
+      setTimeout("$('#progress-inner').fadeIn(200);", 100);
       setTimeout("$('#progress-inner').animate({ height: '{{frayer}}%' }, 3000, 'swing')", 500);
     });
   </script>
