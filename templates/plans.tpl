@@ -36,6 +36,7 @@
   
     <div style="position:absolute;right:200px;top:230px;width:700px">
       <table style="width:100%;">
+        <caption>you can save 100 shek every month!</caption>
         <tr class="th">
           <td>{% trans "cost per month" %}</td>
           <td>{% trans "annual cost" %}</td>

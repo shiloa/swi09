@@ -7,7 +7,6 @@
         <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"></link>
     </head>
     <body>
-            {# {% include "nav.tpl" %} #}
             {% block main %}{% endblock %}
         {% block footer %}
           <div id="footer"></div>

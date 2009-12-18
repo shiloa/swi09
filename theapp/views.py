@@ -4,7 +4,7 @@ from django.utils.translation import check_for_language
 from pdb import set_trace as debugger
 from swi09.theapp.forms import UserInfoForm
 from swi09.theapp.models import *
-
+from decimal import Decimal
 def plans(request):
 
     if request.method != 'GET':
@@ -14,16 +14,21 @@ def plans(request):
     sms = request.GET.get('sms', 'bad')
     price = request.GET.get('price', 'bad')
 
+    print minutes
+    print sms
+    print price
+
     try:
         minutes = int(minutes)
         sms = int(sms)
         price = int(price)
     except ValueError:
+        print 'conv error'
         raise Http404
 
     plans = best_plans(sms, minutes, price)
-
-    return render_to_response('plans.tpl', {'plans':plans, 'price':price, }, context_instance=RequestContext(request))
+    saved = True if plans[0][0] < price else False
+    return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved }, context_instance=RequestContext(request))
 
 
 def best_plans(sms, minutes, price):
@@ -32,7 +37,7 @@ def best_plans(sms, minutes, price):
         plan_price = plan.my_price(sms, minutes)
         results.append((plan_price, price - plan_price if price > plan_price else 0, plan))
 
-    return sorted(results)[0:4]
+    return sorted(results) #[0:4]
 
 STEPS = 5
 def graphs(request):
@@ -82,6 +87,15 @@ def graphs(request):
     return HttpResponse(result)
 
 
+def showme(request):
+    do = ""
+    for x in Plan.objects.all():
+        if not x.step_set.filter(classification=Step.STEP_TYPES[0]):
+            Step(classification=Step.STEP_TYPES[0], unit_cost=Decimal("0.4"), plan=x, starts_at=x.base_sms, ends_at=99999).save()
+        if not x.step_set.filter(classification=Step.STEP_TYPES[1]):
+            Step(classification=Step.STEP_TYPES[1], unit_cost=Decimal("0.5"), plan=x, starts_at=x.base_minutes, ends_at=99999).save()
+    return HttpResponse(do)
+
 def home_page(request):
     """renders the home page of the site"""
     force_language(request, 'he')
@@ -92,8 +106,8 @@ def home_page(request):
             cost = form.cleaned_data['cost']
             sms = form.cleaned_data['sms']
             minutes = form.cleaned_data['minutes']
-            get_string = "?sms=%s&minutes=%s&cost=%s" % (sms, minutes, cost)
-            return HttpResponseRedirect("/plans/%s" % get_string)
+            get_string = "?sms=%s&minutes=%s&price=%s" % (sms, minutes, cost)
+            return HttpResponseRedirect("/plans%s" % get_string)
     else:
         form = UserInfoForm()
 

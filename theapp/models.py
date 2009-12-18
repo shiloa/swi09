@@ -44,7 +44,9 @@ class Plan(models.Model):
 
     def my_price(self, sms, minutes):
         ''' Calcuate the plan's cost for a specific sms/minutes combo '''
-        total = self.flat_rate
+        total = self.flat_rate + self.base_minutes * self.base_min_rate
+        if not self.base_minutes:
+            total += minutes * self.base_min_rate
         
         for step in self.steps:
 
@@ -77,7 +79,7 @@ class Step(models.Model):
     ends_at = models.IntegerField(verbose_name=_(u'pricing ends at (number)'))
     
     def __unicode__(self):
-        return self.classification
+        return u'%s - %s' % (self.plan, self.classification)
         
     class Meta:
         db_table = 'steps'
@@ -89,9 +91,10 @@ class UserInfo(models.Model):
     minutes = models.PositiveIntegerField()
     sms = models.PositiveIntegerField()
     cost = models.PositiveIntegerField()
+
     phone = models.PositiveIntegerField(null=True, blank=True)
 
     def __unicode__(self):
-        return u'%d at %s' % (self.cost, self.company)
+        return u'Minutes: %d SMS: %d Cost: %d' % (self.minutes, self.sms, self.cost)
 
 

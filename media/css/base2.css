@@ -115,3 +115,9 @@ input {
 table {
     text-align:center;
 }
+caption {
+    color:white;
+    font-size:30px;
+    font-weight:30px;
+}
+}
