@@ -14,11 +14,16 @@ def plans(request):
     sms = request.GET.get('sms', 'bad')
     price = request.GET.get('price', 'bad')
 
+    print minutes
+    print sms
+    print price
+
     try:
         minutes = int(minutes)
         sms = int(sms)
         price = int(price)
     except ValueError:
+        print 'conv error'
         raise Http404
 
     plans = best_plans(sms, minutes, price)
@@ -95,14 +100,13 @@ def home_page(request):
     """renders the home page of the site"""
     if request.method == 'POST':
         form = UserInfoForm(request.POST)
-        debugger()
         if form.is_valid():
             form.save()
             cost = form.cleaned_data['cost']
             sms = form.cleaned_data['sms']
             minutes = form.cleaned_data['minutes']
-            get_string = "?sms=%s&minutes=%s&cost=%s" % (sms, minutes, cost)
-            return HttpResponseRedirect("/plans/%s" % get_string)
+            get_string = "?sms=%s&minutes=%s&price=%s" % (sms, minutes, cost)
+            return HttpResponseRedirect("/plans%s" % get_string)
     else:
         form = UserInfoForm()
 
