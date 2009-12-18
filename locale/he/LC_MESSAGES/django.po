@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 23:40+0200\n"
+"POT-Creation-Date: 2009-12-18 10:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,21 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: settings.py:34
-msgid "Hebrew"
+#: settings.py:36
+msgid "עברית"
 msgstr ""
 
-#: settings.py:35
+#: settings.py:37
 msgid "English"
 msgstr ""
 
 #: templates/base.tpl:5 templates/nav.tpl:9
 msgid "Home"
-msgstr ""
+msgstr "דף הבית"
 
-#: templates/base.tpl:5
-msgid "Some Site"
-msgstr ""
+#: templates/base.tpl:5 templates/plans.tpl:20
+msgid "FrayerMeter"
+msgstr "פרייאר מטר"
 
 #: templates/construction.tpl:5
 msgid "Frier - Under Construction"
@@ -44,45 +44,33 @@ msgstr ""
 msgid "See you soon!"
 msgstr ""
 
-#: templates/home.tpl:3 templates/home.tpl.py:8
+#: templates/home.tpl:7
 msgid "Frayer Meter"
-msgstr "פריאר מטר"
+msgstr "פרייאר-מטר"
 
-#: templates/home.tpl:13
+#: templates/home.tpl:11
 msgid "how high is"
-msgstr "מה גובה"
+msgstr "כמה את/ה משלמ/ת"
 
-#: templates/home.tpl:13
+#: templates/home.tpl:11
 msgid "your monthly payment?"
-msgstr "התשלום החודשי שלך?"
+msgstr "בכל חודש?"
 
-#: templates/home.tpl:15
-msgid "monthly payment:"
-msgstr "תשלום חודשי:"
-
-#: templates/home.tpl:23
-msgid "how many minutes"
+#: templates/home.tpl:21
+msgid "how many minutes do"
 msgstr "כמה דקות את/ה"
 
-#: templates/home.tpl:23
-msgid "speak each month?"
-msgstr "מדבר/ת בחודש?"
+#: templates/home.tpl:21
+msgid "you speak each month?"
+msgstr "מדבר/ת כל חודש?"
 
-#: templates/home.tpl:26
-msgid "monthly minutes:"
-msgstr "דקות בחודש:"
-
-#: templates/home.tpl:34
+#: templates/home.tpl:32
 msgid "how many texts"
 msgstr "כמה הודעות טקסט"
 
-#: templates/home.tpl:34
+#: templates/home.tpl:32
 msgid "do you send each month?"
-msgstr "את/ה שולח/ת בחודש?"
-
-#: templates/home.tpl:37
-msgid "monthly texts:"
-msgstr "סמסים בחודש:"
+msgstr "את/ה שולח כל חודש?"
 
 #: templates/nav.tpl:3
 msgid "Contact"
@@ -96,12 +84,24 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: theapp/models.py:10
-msgid "company name"
+#: templates/plans.tpl:3
+msgid "plans"
 msgstr ""
 
-#: theapp/models.py:28
+#: templates/plans.tpl:35
+msgid "cost per month"
+msgstr "עלות חודשית"
+
+#: templates/plans.tpl:36
+msgid "annual cost"
+msgstr "עלות שנתית"
+
+#: templates/plans.tpl:37 theapp/models.py:28
 msgid "plan name"
+msgstr "שם התכנית"
+
+#: theapp/models.py:10
+msgid "company name"
 msgstr ""
 
 #: theapp/models.py:29
@@ -136,30 +136,30 @@ msgstr ""
 msgid "plan active?"
 msgstr ""
 
-#: theapp/models.py:71
+#: theapp/models.py:73
 msgid "Plan Text Message"
 msgstr ""
 
-#: theapp/models.py:71
+#: theapp/models.py:73
 msgid "Plan Minutes"
 msgstr ""
 
-#: theapp/models.py:73
+#: theapp/models.py:75
 msgid "step classification"
 msgstr ""
 
-#: theapp/models.py:74
+#: theapp/models.py:76
 msgid "unit cost in this step"
 msgstr ""
 
-#: theapp/models.py:75
+#: theapp/models.py:77
 msgid "plan for this pricing step"
 msgstr ""
 
-#: theapp/models.py:76
+#: theapp/models.py:78
 msgid "pricing starts at (number)"
 msgstr ""
 
-#: theapp/models.py:77
+#: theapp/models.py:79
 msgid "pricing ends at (number)"
 msgstr ""

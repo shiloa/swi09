@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-17 15:38+0200\n"
+"POT-Creation-Date: 2009-12-18 10:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,20 +16,92 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: settings.py:34
-msgid "Hebrew"
+#: settings.py:36
+msgid "עברית"
 msgstr ""
 
-#: settings.py:35
+#: settings.py:37
 msgid "English"
+msgstr ""
+
+#: templates/base.tpl:5 templates/nav.tpl:9
+msgid "Home"
+msgstr ""
+
+#: templates/base.tpl:5 templates/plans.tpl:20
+msgid "FrayerMeter"
+msgstr ""
+
+#: templates/construction.tpl:5
+msgid "Frier - Under Construction"
+msgstr ""
+
+#: templates/construction.tpl:80
+msgid "The Site is Under Construction..."
+msgstr ""
+
+#: templates/construction.tpl:83
+msgid "See you soon!"
+msgstr ""
+
+#: templates/home.tpl:7
+msgid "Frayer Meter"
+msgstr ""
+
+#: templates/home.tpl:11
+msgid "how high is"
+msgstr ""
+
+#: templates/home.tpl:11
+msgid "your monthly payment?"
+msgstr ""
+
+#: templates/home.tpl:21
+msgid "how many minutes do"
+msgstr ""
+
+#: templates/home.tpl:21
+msgid "you speak each month?"
+msgstr ""
+
+#: templates/home.tpl:32
+msgid "how many texts"
+msgstr ""
+
+#: templates/home.tpl:32
+msgid "do you send each month?"
+msgstr ""
+
+#: templates/nav.tpl:3
+msgid "Contact"
+msgstr ""
+
+#: templates/nav.tpl:5
+msgid "Gallery"
+msgstr ""
+
+#: templates/nav.tpl:7
+msgid "About"
+msgstr ""
+
+#: templates/plans.tpl:3
+msgid "plans"
+msgstr ""
+
+#: templates/plans.tpl:35
+msgid "cost per month"
+msgstr ""
+
+#: templates/plans.tpl:36
+msgid "annual cost"
+msgstr ""
+
+#: templates/plans.tpl:37 theapp/models.py:28
+msgid "plan name"
 msgstr ""
 
 #: theapp/models.py:10
 msgid "company name"
-msgstr ""
-
-#: theapp/models.py:28
-msgid "plan name"
 msgstr ""
 
 #: theapp/models.py:29
@@ -37,7 +109,7 @@ msgid "number of base minutes in plan"
 msgstr ""
 
 #: theapp/models.py:30
-msgid "plan's flat rate (before additional costs)"
+msgid "plan's flat rate (before additional costs) in NIS"
 msgstr ""
 
 #: theapp/models.py:31
@@ -45,41 +117,49 @@ msgid "number of included text messages in plan"
 msgstr ""
 
 #: theapp/models.py:32
-msgid "additional plan info"
+msgid "price/sms in NIS"
 msgstr ""
 
 #: theapp/models.py:33
-msgid "company"
+msgid "price/min in NIS"
 msgstr ""
 
 #: theapp/models.py:34
+msgid "additional plan info"
+msgstr ""
+
+#: theapp/models.py:35
+msgid "company"
+msgstr ""
+
+#: theapp/models.py:36
 msgid "plan active?"
 msgstr ""
 
-#: theapp/models.py:50
-msgid "Text Message"
+#: theapp/models.py:73
+msgid "Plan Text Message"
 msgstr ""
 
-#: theapp/models.py:50
+#: theapp/models.py:73
 msgid "Plan Minutes"
 msgstr ""
 
-#: theapp/models.py:52
+#: theapp/models.py:75
 msgid "step classification"
 msgstr ""
 
-#: theapp/models.py:53
+#: theapp/models.py:76
 msgid "unit cost in this step"
 msgstr ""
 
-#: theapp/models.py:54
+#: theapp/models.py:77
 msgid "plan for this pricing step"
 msgstr ""
 
-#: theapp/models.py:55
+#: theapp/models.py:78
 msgid "pricing starts at (number)"
 msgstr ""
 
-#: theapp/models.py:56
+#: theapp/models.py:79
 msgid "pricing ends at (number)"
 msgstr ""

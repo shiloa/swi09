@@ -3,10 +3,20 @@ body {
     font-family:Arial;
     padding: 0;
     text-align: center;
+    background-color: white;
+    background-image: url('/static/images/bg-gray.png');
+    background-position: top;
+    background-repeat: repeat-x;
+}
+form {
+    background-color: inherit;
+    width: 960px;
+    margin: 0 auto;
 }
 div.wrap {
-    margin:auto;
+    margin:0 auto;
     width:960px;
+    border: 1px solid #666;
     min-height:800px;
     position:relative;
     background-color:#CE3918;
@@ -75,14 +85,14 @@ input {
 .header {
     clear: both;
     margin-bottom:150px;
-    margin-right: 0;
+    margin-left: 35em;
 }
 .button {
     width:361px;
     height:169px;
     position:absolute;
     left:150px;
-    top:590px;
+    top:550px;
     border-width:0px;
 }
 img {
@@ -93,11 +103,11 @@ input[type=password], input[type=text] {
     -moz-border-radius-bottomright:4px;
     -moz-border-radius-topleft:4px;
     -moz-border-radius-topright:4px;
-    border:1px solid #AACCEE;
+    border:1px solid #666;
     font-size:13px;
     margin:0 0 5px;
     padding:5px;
-    width:203px;
+    width:150px;
     color:#666;
     font-family:'Helvetica';
     font-size:large;
@@ -106,4 +116,21 @@ input[type=password], input[type=text] {
     font-variant:normal;
     font-weight:normal;
     line-height:normal;
+}
+
+.textbox {
+    clear: both;
+    padding-top: 1em;
+ 
+}   
+.textbox input {
+    margin-top: 10px;    
+}
+
+
+.errormsg {
+    padding: 0;
+    margin-top: 0;
+    color: #45EA21;
+    font-size: 10pt;
 }
