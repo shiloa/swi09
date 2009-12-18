@@ -8,8 +8,8 @@
     <div class="header"><a href="{% url home_page %}"><img src="http://i48.tinypic.com/24zvp4w.jpg" alt='{% trans "Frayer Meter" %}'></a></div>
     <img src="http://i47.tinypic.com/zji03n.jpg" class="clock" alt="clock">
     <div class="greenbox b1">
-      <div id="costtop">
-        {% trans "how high is" %}<br/>{% trans "your monthly payment?" %}
+      <div id="costtop" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %}>
+        {% trans "how high is" %}<br/>{% trans "your monthly bill?" %}
         <br/><span class="textbox">{{ form.cost }}</span>
       </div>
       <div class="errormsg">
@@ -18,7 +18,7 @@
    </div>
 
   <div class="greenbox b2">
-    <div id="minutestop">
+    <div id="minutestop" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %} >
       {% trans "how many minutes do" %}<br />{% trans "you speak each month?" %}
       <br />
       <span class="textbox">{{ form.minutes }}</span>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="greenbox b3">
-    <div id="smstop">
+    <div id="smstop" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %}>
       {% trans "how many texts" %}<br />{% trans "do you send each month?" %}
       <span class="textbox">{{ form.sms }}</span>
     </div>

@@ -28,7 +28,7 @@
     margin-bottom: 1em;
   }
   
-  .link-button {
+  .link-button, .close {
     padding: 5px 10px;
     border: 2px solid #bfbfbf;
     -moz-border-radius: 2px;
@@ -50,14 +50,15 @@
 <script type="text/javascript" charset="utf-8">
   $(function() {
     $('#phone').val('');
-    $('#send').click(function(){
+    $('#sendit').click(function(){
       $('#send-table').fadeOut(1000);
       $('#disclaimer').fadeOut(1000);
+      $('.close').fadeOut(1000);
       $(this).fadeOut(1000);
       setTimeout("$('#thanks').fadeIn();", 1000);
     });
     
-    $('#close').click(function (){
+    $('.close').click(function (){
       $('#popup').hide();
     });
   });
@@ -74,13 +75,14 @@
       </td>
     </tr>
   </table>
-  <a href="#" id="send" class="link-button">{% trans "send" %}</a>    
+  <a href="#" class="link-button close">{% trans "close" %}</a>    
+  <a href="#" id="sendit" class="link-button">{% trans "send" %}</a>    
   <div id="disclaimer">
     {% trans "(we will <b>NEVER</b> abuse your number)" %}
   </div>   
   <div id="thanks" style="display: none;">
     <span id="thanks-text">{% trans "thanks!" %}</span>
-    <a href="#" id="close" class="link-button">{% trans "close" %}</a>    
+    <a href="#" class="link-button close">{% trans "close" %}</a>    
  
   </div>
 

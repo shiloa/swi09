@@ -155,11 +155,11 @@ font-size:30px;
 {% include "popup.tpl" %}
 {% load i18n %}
 <div class="wrap">
-<div class="header"><a href=""><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
+<div class="header"><a href="{% url home_page %}"><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
 
 <div style="padding:20px;">
 <div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
-    <div style="position:absolute;right:40px;color:white;font-weight:bold">
+    <div style="position:absolute;right:40px;color:white;font-weight:bold" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %}>
       {% trans "sucker" %}
     <br /><br /><br/>
       {% trans "paying a lot" %}
@@ -177,10 +177,21 @@ font-size:30px;
 
 <div style="margin-top:50px;position:absolute;right:-100px">
 <form method="get" action="" style="width:200px;position:absolute;right:100px">
-<label for="imoney">{% trans "monthly payment:" %}</label><input class="page2" type="text" name="price" id="cost"><br /><br />
-<label for="iminutes">{% trans "monthly minutes:" %}</label><input class="page2" type="text" name="minutes" id="minutes"><br /><br />
-<label for="isms">{% trans "monthyl texts:" %}</label><input class="page2" type="text" name="sms" id="sms"><br /><br />
-<input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg">
+<label for="imoney"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
+  {% trans "shekels/mo." %}
+</label>
+<input class="page2" type="text" name="price" id="cost" /><br /><br />
+<label for="iminutes"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
+  {% trans "minutes/mo." %}
+</label>
+<input class="page2" type="text" name="minutes" id="minutes" />
+<br /><br />
+<label for="isms"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
+  {% trans "texts/mo." %}
+</label>
+<input class="page2" type="text" name="sms" id="sms" />
+<br /><br />
+<input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg" />
 </div>
 </div>
 <div style="position:absolute;right:300px;top:230px;width:600px">

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 12:18+0200\n"
+"POT-Creation-Date: 2009-12-18 18:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,8 +53,8 @@ msgid "how high is"
 msgstr "כמה את/ה משלם"
 
 #: templates/home.tpl:12
-msgid "your monthly payment?"
-msgstr "כל חודש?"
+msgid "your monthly bill?"
+msgstr "בכל חודש?"
 
 #: templates/home.tpl:22
 msgid "how many minutes do"
@@ -104,51 +104,51 @@ msgstr "ממוצע"
 msgid "good deal!"
 msgstr "קומבינטור!"
 
-#: templates/plans.tpl:180
-msgid "monthly payment:"
-msgstr "תשלום חודשי:"
-
 #: templates/plans.tpl:181
-msgid "monthly minutes:"
-msgstr "דקות חודשיות:"
+msgid "shekels/mo."
+msgstr "עלות חודשית:"
 
-#: templates/plans.tpl:182
-msgid "monthyl texts:"
+#: templates/plans.tpl:185
+msgid "minutes/mo."
+msgstr "דקות בחודש:"
+
+#: templates/plans.tpl:190
+msgid "texts/mo."
 msgstr "סמסים בחודש:"
 
-#: templates/plans.tpl:192
+#: templates/plans.tpl:203
 msgid "you can save up to "
 msgstr "את/ה יכול/ה לחסוך כ-"
 
-#: templates/plans.tpl:192
+#: templates/plans.tpl:203
 msgid " shekels every month!"
 msgstr " שקלים כל חודש!"
 
-#: templates/plans.tpl:194
+#: templates/plans.tpl:205
 msgid "you already have a great deal!"
 msgstr "יש לך כבר דיל מצויין!"
 
-#: templates/plans.tpl:201
+#: templates/plans.tpl:212
 msgid "cost per month"
 msgstr "עלות חודשית"
 
-#: templates/plans.tpl:202
+#: templates/plans.tpl:213
 msgid "annual cost"
 msgstr "חיסכון שנתי"
 
-#: templates/plans.tpl:203 theapp/models.py:28
+#: templates/plans.tpl:214 theapp/models.py:28
 msgid "plan name"
 msgstr "שם התכנית"
 
-#: templates/plans.tpl:204
+#: templates/plans.tpl:215
 msgid "operator"
 msgstr "מפעיל"
 
-#: templates/plans.tpl:221
+#: templates/plans.tpl:232
 msgid "I just saved "
 msgstr "הרגע חסכתי "
 
-#: templates/plans.tpl:221
+#: templates/plans.tpl:232
 msgid " shekels using "
 msgstr " שקלים בחודש  "
 
@@ -156,21 +156,21 @@ msgstr " שקלים בחודש  "
 msgid "your phone number:"
 msgstr "מספר הטלפון שלך:"
 
-#: templates/popup.tpl:77
+#: templates/popup.tpl:77 templates/popup.tpl.py:84
+msgid "close"
+msgstr "סגירה"
+
+#: templates/popup.tpl:78
 msgid "send"
 msgstr "שלח/י"
 
-#: templates/popup.tpl:79
+#: templates/popup.tpl:80
 msgid "(we will <b>NEVER</b> abuse your number)"
 msgstr "(המספר שלך לעולם לא ינוצל לרעה)"
 
-#: templates/popup.tpl:82
+#: templates/popup.tpl:83
 msgid "thanks!"
 msgstr "תודה!"
-
-#: templates/popup.tpl:83
-msgid "close"
-msgstr "סגירה"
 
 #: theapp/models.py:10
 msgid "company name"
@@ -235,3 +235,12 @@ msgstr ""
 #: theapp/models.py:79
 msgid "pricing ends at (number)"
 msgstr ""
+
+#~ msgid "monthly payment:"
+#~ msgstr "תשלום חודשי:"
+
+#~ msgid "monthly minutes:"
+#~ msgstr "דקות חודשיות:"
+
+#~ msgid "monthyl texts:"
+#~ msgstr "סמסים בחודש:"
