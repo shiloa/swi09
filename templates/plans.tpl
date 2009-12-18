@@ -98,8 +98,8 @@ margin-right:115px;
         height: 20px;
       }
       
-      #progress-inner {
-        height: 100%;
+#progress-inner {
+        height: 0%;
         display: none;
 background-color:white;
 
