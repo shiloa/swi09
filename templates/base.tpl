@@ -15,8 +15,8 @@
         {% endblock %}
     </body>
     {% block javascript %}
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-        {# <script src="/static/js/jquery.min.js" type="text/javascript"></script> #}
+        {# <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script> #}
+        <script src="/static/js/jquery.min.js" type="text/javascript"></script>
         <script src="/static/js/jquery.ui.min.js" type="text/javascript"></script>
         <script src="/static/js/jquery.cookie.js" type="text/javascript"></script>
         <script src="/static/js/site.js" type="text/javascript"></script>
