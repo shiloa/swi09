@@ -19,7 +19,6 @@
                 </a>
                 {% include "languages.tpl" %}
               </div>
-            {% include "nav.tpl" %}
             {% block main %}{% endblock %}
         </div>
         {% block footer %}
