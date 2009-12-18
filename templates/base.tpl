@@ -5,6 +5,8 @@
         <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "FrayerMeter" %}</title>
         <link rel="shortcut icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg">
         <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"></link>
+        {% block headme %}
+{% endblock %}
     </head>
     <body>
             {% block main %}{% endblock %}
