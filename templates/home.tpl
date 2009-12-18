@@ -1,6 +1,7 @@
 {% extends "base.tpl" %}
 {% load i18n %}
 {% block main %}
+{% include "popup.tpl" %}
 <link rel="stylesheet" href="/static/css/base1.css" type="text/css" media="screen" />
 <form action="" method="post" style="margin-top: -0.5em;">
   <div class="wrap">

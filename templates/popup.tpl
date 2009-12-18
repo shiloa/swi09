@@ -39,6 +39,12 @@
   .link-button:hover {
     background-color: #A6E49F;
   }
+  
+  #disclaimer {
+    font-size: 8pt;
+    color: #bfbfbf;
+    margin-top: 3em;
+  }
 </style>
 <script src="/static/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8">
@@ -46,6 +52,7 @@
     $('#phone').val('');
     $('#send').click(function(){
       $('#send-table').fadeOut(1000);
+      $('#disclaimer').fadeOut(1000);
       $(this).fadeOut(1000);
       setTimeout("$('#thanks').fadeIn();", 1000);
     });
@@ -68,8 +75,13 @@
     </tr>
   </table>
   <a href="#" id="send" class="link-button">{% trans "send" %}</a>    
+  <div id="disclaimer">
+    {% trans "(we will <b>NEVER</b> abuse your number)" %}
+  </div>   
   <div id="thanks" style="display: none;">
     <span id="thanks-text">{% trans "thanks!" %}</span>
     <a href="#" id="close" class="link-button">{% trans "close" %}</a>    
+ 
   </div>
+
 </div>

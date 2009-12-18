@@ -147,38 +147,32 @@ font-weight:bold;
 font-size:30px;
 }
 </style>
-</head>
-<body>
 {% include "popup.tpl" %}
+{% load i18n %}
 <div class="wrap">
 <div class="header"><a href=""><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
 
 <div style="padding:20px;">
 <div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
-    <div style="position:absolute;right:40px;color:white;font-weight:bold">??????
-
+    <div style="position:absolute;right:40px;color:white;font-weight:bold">
+      {% trans "sucker" %}
     <br /><br />
-
-    ????<br />????
-
+      {% trans "paying a lot" %}
+    <br />
+      {% trans "average" %}
     <br /><br /><br />
-
-    ?????
-
-    <br /><br /><br />
-
-    ??? ???
+    {% trans "good deal!" %}
 
     </div>
 
-<div id="progress">
+<div id="progress" style="margin-left: 5em;">
 
   <div id="progress-inner"></div>
 </div>
 <div style="margin-top:50px;position:absolute;right:-100px"><form method="get" action="" style="width:200px;position:absolute;right:100px">
-<label for="imoney">????? ?????:</label><input class="page2" type="text" name="cost" id="cost"><br /><br />
-<label for="iminutes">???? ?????:</label><input class="page2" type="text" name="minutes" id="minutes"><br /><br />
-<label for="isms">????? ?????:</label><input class="page2" type="text" name="sms" id="sms"><br /><br />
+<label for="imoney">{% trans "monthly payment:" %}</label><input class="page2" type="text" name="cost" id="cost"><br /><br />
+<label for="iminutes">{% trans "monthly minutes:" %}</label><input class="page2" type="text" name="minutes" id="minutes"><br /><br />
+<label for="isms">{% trans "monthyl texts:" %}</label><input class="page2" type="text" name="sms" id="sms"><br /><br />
 <input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg">
 </div>
 </div>
@@ -188,9 +182,9 @@ font-size:30px;
 <td colspan=4>
 <h2>
 {% if saved %}
-you can save {{ saved }} shek every month!
+{% trans "you can save up to " %}{{ saved }}{% trans " shekels every month!" %}
 {% else %}
-You already have a great deal
+{% trans "you already have a great deal!" %}
 {% endif %}
 </h2>
 </td>

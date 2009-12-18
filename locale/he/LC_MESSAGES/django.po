@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 11:12+0200\n"
+"POT-Creation-Date: 2009-12-18 11:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,9 +28,9 @@ msgstr ""
 msgid "Home"
 msgstr "דף הבית"
 
-#: templates/base.tpl:5 templates/plans.tpl:20
+#: templates/base.tpl:5
 msgid "FrayerMeter"
-msgstr "פרייאר מטר"
+msgstr "פרייאר-מטר"
 
 #: templates/construction.tpl:5
 msgid "Frier - Under Construction"
@@ -46,15 +46,15 @@ msgstr ""
 
 #: templates/home.tpl:8
 msgid "Frayer Meter"
-msgstr "פרייאר-מטר"
+msgstr "פרייאר מטר"
 
 #: templates/home.tpl:12
 msgid "how high is"
-msgstr "כמה את/ה משלמ/ת"
+msgstr "כמה את/ה משלם"
 
 #: templates/home.tpl:12
 msgid "your monthly payment?"
-msgstr "בכל חודש?"
+msgstr "כל חודש?"
 
 #: templates/home.tpl:22
 msgid "how many minutes do"
@@ -70,7 +70,7 @@ msgstr "כמה הודעות טקסט"
 
 #: templates/home.tpl:33
 msgid "do you send each month?"
-msgstr "את/ה שולח כל חודש?"
+msgstr "אתה שולח כל חודש?"
 
 #: templates/nav.tpl:3
 msgid "Contact"
@@ -86,33 +86,77 @@ msgstr ""
 
 #: templates/plans.tpl:3
 msgid "plans"
-msgstr ""
+msgstr "תכניות"
 
-#: templates/plans.tpl:35
+#: templates/plans.tpl:158
+msgid "sucker"
+msgstr "פרייאר"
+
+#: templates/plans.tpl:160
+msgid "paying a lot"
+msgstr "משלם הרבה"
+
+#: templates/plans.tpl:162
+msgid "average"
+msgstr "ממוצע"
+
+#: templates/plans.tpl:164
+msgid "good deal!"
+msgstr "קומבינטור!"
+
+#: templates/plans.tpl:173
+msgid "monthly payment:"
+msgstr "תשלום חודשי:"
+
+#: templates/plans.tpl:174
+msgid "monthly minutes:"
+msgstr "דקות חודשיות:"
+
+#: templates/plans.tpl:175
+msgid "monthyl texts:"
+msgstr "סמסים בחודש:"
+
+#: templates/plans.tpl:185
+msgid "you can save up to "
+msgstr "את/ה יכול/ה לחסוך כ-"
+
+#: templates/plans.tpl:185
+msgid " shekels every month!"
+msgstr "שקלים כל חודש!"
+
+#: templates/plans.tpl:187
+msgid "you already have a great deal!"
+msgstr "יש לך כבר דיל מצויין!"
+
+#: templates/plans.tpl:194
 msgid "cost per month"
 msgstr "עלות חודשית"
 
-#: templates/plans.tpl:36
+#: templates/plans.tpl:195
 msgid "annual cost"
-msgstr "עלות שנתית"
+msgstr "חיסכון שנתי"
 
-#: templates/plans.tpl:37 theapp/models.py:28
+#: templates/plans.tpl:196 theapp/models.py:28
 msgid "plan name"
 msgstr "שם התכנית"
 
-#: templates/popup.tpl:62
+#: templates/popup.tpl:69
 msgid "your phone number:"
 msgstr "מספר הטלפון שלך:"
 
-#: templates/popup.tpl:70
+#: templates/popup.tpl:77
 msgid "send"
 msgstr "שלח/י"
 
-#: templates/popup.tpl:72
+#: templates/popup.tpl:79
+msgid "(we will <b>NEVER</b> abuse your number)"
+msgstr "(המספר שלך לעולם לא ינוצל לרעה)"
+
+#: templates/popup.tpl:82
 msgid "thanks!"
 msgstr "תודה!"
 
-#: templates/popup.tpl:73
+#: templates/popup.tpl:83
 msgid "close"
 msgstr "סגירה"
 

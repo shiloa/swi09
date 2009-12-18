@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 10:32+0200\n"
+"POT-Creation-Date: 2009-12-18 11:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.tpl:5 templates/plans.tpl:20
+#: templates/base.tpl:5
 msgid "FrayerMeter"
 msgstr ""
 
@@ -44,31 +44,31 @@ msgstr ""
 msgid "See you soon!"
 msgstr ""
 
-#: templates/home.tpl:7
+#: templates/home.tpl:8
 msgid "Frayer Meter"
 msgstr ""
 
-#: templates/home.tpl:11
+#: templates/home.tpl:12
 msgid "how high is"
 msgstr ""
 
-#: templates/home.tpl:11
+#: templates/home.tpl:12
 msgid "your monthly payment?"
 msgstr ""
 
-#: templates/home.tpl:21
+#: templates/home.tpl:22
 msgid "how many minutes do"
 msgstr ""
 
-#: templates/home.tpl:21
+#: templates/home.tpl:22
 msgid "you speak each month?"
 msgstr ""
 
-#: templates/home.tpl:32
+#: templates/home.tpl:33
 msgid "how many texts"
 msgstr ""
 
-#: templates/home.tpl:32
+#: templates/home.tpl:33
 msgid "do you send each month?"
 msgstr ""
 
@@ -88,16 +88,76 @@ msgstr ""
 msgid "plans"
 msgstr ""
 
-#: templates/plans.tpl:35
+#: templates/plans.tpl:158
+msgid "sucker"
+msgstr ""
+
+#: templates/plans.tpl:160
+msgid "paying a lot"
+msgstr ""
+
+#: templates/plans.tpl:162
+msgid "average"
+msgstr ""
+
+#: templates/plans.tpl:164
+msgid "good deal!"
+msgstr ""
+
+#: templates/plans.tpl:173
+msgid "monthly payment:"
+msgstr ""
+
+#: templates/plans.tpl:174
+msgid "monthly minutes:"
+msgstr ""
+
+#: templates/plans.tpl:175
+msgid "monthyl texts:"
+msgstr ""
+
+#: templates/plans.tpl:185
+msgid "you can save up to "
+msgstr ""
+
+#: templates/plans.tpl:185
+msgid " shekels every month!"
+msgstr ""
+
+#: templates/plans.tpl:187
+msgid "you already have a great deal!"
+msgstr ""
+
+#: templates/plans.tpl:194
 msgid "cost per month"
 msgstr ""
 
-#: templates/plans.tpl:36
+#: templates/plans.tpl:195
 msgid "annual cost"
 msgstr ""
 
-#: templates/plans.tpl:37 theapp/models.py:28
+#: templates/plans.tpl:196 theapp/models.py:28
 msgid "plan name"
+msgstr ""
+
+#: templates/popup.tpl:69
+msgid "your phone number:"
+msgstr ""
+
+#: templates/popup.tpl:77
+msgid "send"
+msgstr ""
+
+#: templates/popup.tpl:79
+msgid "(we will <b>NEVER</b> abuse your number)"
+msgstr ""
+
+#: templates/popup.tpl:82
+msgid "thanks!"
+msgstr ""
+
+#: templates/popup.tpl:83
+msgid "close"
 msgstr ""
 
 #: theapp/models.py:10
