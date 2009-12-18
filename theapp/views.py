@@ -14,16 +14,11 @@ def plans(request):
     sms = request.GET.get('sms', 'bad')
     price = request.GET.get('price', 'bad')
 
-    print minutes
-    print sms
-    print price
-
     try:
         minutes = int(minutes)
         sms = int(sms)
         price = int(price)
     except ValueError:
-        print 'conv error'
         raise Http404
 
     plans = best_plans(sms, minutes, price)
