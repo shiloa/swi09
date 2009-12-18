@@ -2,7 +2,7 @@
 <html {% if LANGUAGE_BIDI %}dir="rtl"{% endif %} lang="{{ LANGUAGE_CODE }}">
     <head>
         {% include "meta.tpl" %}
-        <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "Some Site" %}</title>
+        <title>{% block title %}{% trans "Home" %}{% endblock %} &curren; {% trans "FrayerMeter" %}</title>
         <link rel="shortcut icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg">
         <link rel="icon" href="http://i50.tinypic.com/25su7go.jpg" type="image/jpeg"></link>
     </head>

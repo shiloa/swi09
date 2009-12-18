@@ -7,8 +7,8 @@ div.wrap {
     width:960px;
     min-height:800px;
     position:relative;
-    background-color:#CE3918;
-    background-image:url(http://i49.tinypic.com/2crabf8.jpg);
+    background-color:#ECCF6F;
+    background-image:url(http://i50.tinypic.com/16kuyq9.jpg);
     background-repeat:repeat-x;
 }
 img {
@@ -33,12 +33,12 @@ img {
     right:16%;
 }
 .b2 {
-position:absolute;
-right:39%;
+    position:absolute;
+    right:39%;
 }
 .b3 {
-position:absolute;
-right:62%;
+    position:absolute;
+    right:62%;
 }
 #costtop,#minutestop,#smstop {
     height:120px;
@@ -48,6 +48,8 @@ input {
     width:40px;
     margin-right:10px;
     border:1px solid black;
+    position:absolute;
+    right:100px;
 }
 .bluebar {
     background-image:url(http://i45.tinypic.com/15yzwp3.jpg);
@@ -71,16 +73,45 @@ input {
     top:125px;
 }
 .header {
-    margin-bottom:150px;
+    margin-bottom:20px;
 }
-.button {
-    width:361px;
-    height:169px;
-    position:absolute;
-    left:150px;
-    top:550px;
-    border-width:0px;
+#progress, #ticks {
+    width: 100px;
+    height: 200px;
+    margin-bottom:20px;
+    border: 1px solid #666;
+    background-color:#CE3918;
+    margin-right:10px;
 }
-img {
+
+#ticks {
+    margin: 1em auto;
+    height: 20px;
+}
+
+#progress-inner {
+    height: 100%;
+    display: none;
+    background-color:white;
+} 
+.title {
+    color:white;
+    font-weight:bold;
+    font-size:30px;
+    margin-right:60%;
+    display:none;
+}
+#packages {
+    display:none;
+}
+#send {
     border-width:0px;
+    width:64px;
+    height:49px;
+}
+.th td {
+    font-weight:bold;
+}
+table {
+    text-align:center;
 }

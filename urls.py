@@ -9,16 +9,16 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # site root url
-    (r'^home/$', 'swi09.theapp.views.home_page', {}, 'home_page'),
+    (r'^home/$', 'swi09.theapp.views.home_page', {}, 'fake_home_page'),
     
     # under contstruction
     (r'^$', 'swi09.theapp.views.home_page', {}, 'home_page'),
     
     # Ajax grapths
-    (r'^graphs$', 'swi09.theapp.views.graphs', {}, 'home_page'),
+    (r'^graphs$', 'swi09.theapp.views.graphs', {}, 'graphs_page'),
     
     # Ajax grapths
-    (r'^plans/$', 'swi09.theapp.views.plans', {}, 'home_page'),
+    (r'^plans$', 'swi09.theapp.views.plans', {}, 'plans_page'),
     
     # site media
     (r'^static/(.*)$',  serve, { 'document_root': os.path.join(DOC_ROOT,'media/') }),

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # Django settings for tali project.
 import os
 DOC_ROOT = os.path.dirname(__file__)
@@ -31,7 +33,7 @@ LANGUAGE_CODE = 'he'
 
 gettext = lambda s: s
 LANGUAGES = (
-    ('he', gettext('Hebrew')),
+    ('he', gettext('עברית')),
     ('en', gettext('English')),
 )
 
@@ -45,7 +47,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_URL = 'http://media.swi09.co.il/'
+MEDIA_URL = 'http://media.frayermeter.com/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).

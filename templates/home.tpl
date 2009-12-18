@@ -1,8 +1,7 @@
 {% extends "base.tpl" %}
 {% load i18n %}
-{% block title %}{% trans "Frayer Meter" %}{% endblock %}                                                                     
 {% block main %}
-<link rel="stylesheet" href="/static/css/base1.css" type="text/css" media="screen" title="no title"
+<link rel="stylesheet" href="/static/css/base1.css" type="text/css" media="screen" />
 <form action="" method="post">
   <div class="wrap">
     <div class="header"><a href=""><img src="http://i48.tinypic.com/24zvp4w.jpg" alt='{% trans "Frayer Meter" %}'></a></div>

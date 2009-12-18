@@ -84,9 +84,9 @@ def graphs(request):
 
 def home_page(request):
     """renders the home page of the site"""
+    force_language(request, 'he')
     if request.method == 'POST':
         form = UserInfoForm(request.POST)
-        debugger()
         if form.is_valid():
             form.save()
             cost = form.cleaned_data['cost']
@@ -99,9 +99,18 @@ def home_page(request):
 
     return render_to_response('home.tpl', { 'form' : form }, context_instance=RequestContext(request))
 
+
 def under_construction(request):
     """the classic 'site is under construction' page"""
     return render_to_response('construction.tpl', context_instance=RequestContext(request))
+
+
+def force_language(request, lang_code):
+    """force language code into session"""
+    if hasattr(request, 'session'):
+        if check_for_language(lang_code):
+            request.session['django_language'] = lang_code
+
 
 def set_language(request, lang_code='en'):
     """sets the application's language and redirects back to the calling template"""
@@ -114,5 +123,5 @@ def set_language(request, lang_code='en'):
         else:
             response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
 
-    return response# Create your views here.
+    return response
 

@@ -1,0 +1,88 @@
+body {
+    direction:rtl;
+    font-family:Arial;
+    padding: 0;
+    text-align: center;
+}
+div.wrap {
+    margin:auto;
+    width:960px;
+    min-height:800px;
+    position:relative;
+    background-color:#CE3918;
+    background-image:url(http://i49.tinypic.com/2crabf8.jpg);
+    background-repeat:repeat-x;
+}
+img {
+    padding:0px;
+    margin:0px;
+    border:0px;
+}
+
+.greenbox {
+    background-image:url(http://i48.tinypic.com/2gtt4j5.jpg);
+    background-position:center top;
+    padding-top:40px;
+    color:white;
+    width:230px;
+    height:260px;
+    background-repeat:no-repeat;
+    text-align:center;
+    font-weight:bold;
+}
+.b1 {
+    position:absolute;
+    right:16%;
+}
+.b2 {
+position:absolute;
+right:39%;
+}
+.b3 {
+position:absolute;
+right:62%;
+}
+#costtop,#minutestop,#smstop {
+    height:120px;
+    font-size:22px;
+}
+input {
+    width:40px;
+    margin-right:10px;
+    border:1px solid black;
+}
+.bluebar {
+    background-image:url(http://i45.tinypic.com/15yzwp3.jpg);
+    background-position:center top;
+    background-repeat:no-repeat;
+    margin:auto;
+    color:white;
+    font-weight:bold;
+    font-size:50px;
+    padding-top:15px;
+    text-align:center;
+    position:absolute;
+    right:10%;
+    top:550px;
+    height:115px;
+    width:790px;
+}
+.clock {
+    position:absolute;
+    left:100px;
+    top:125px;
+}
+.header {
+    margin-bottom:150px;
+}
+.button {
+    width:361px;
+    height:169px;
+    position:absolute;
+    left:150px;
+    top:550px;
+    border-width:0px;
+}
+img {
+    border-width:0px;
+}
