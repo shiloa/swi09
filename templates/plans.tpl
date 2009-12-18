@@ -85,12 +85,12 @@ top:125px;
 margin-bottom:20px;
 }
 #progress, #ticks {
-        width: 100px;
+        width: 70px;
         height: 200px;
 margin-bottom:20px;
         border: 1px solid #666;
         background-color:#CE3918;
-margin-right:73px;
+margin-right:93px;
       }
       
       #ticks {
@@ -116,8 +116,13 @@ border-width:0px;
 width:64px;
 height:49px;
 }
+.largefont {
+    font-size:large;
+}
+.th {
+background-image:none;
 
-.th {background-image:none;}
+}
 .th td {
 font-weight:bold;
 }
@@ -175,8 +180,9 @@ font-size:30px;
 
   <div id="progress-inner"></div>
 </div>
-<div style="margin-top:50px;position:absolute;right:-100px"><form method="get" action="" style="width:200px;position:absolute;right:100px">
-<label for="imoney">????? ?????:</label><input class="page2" type="text" name="cost" id="cost"><br /><br />
+<div style="margin-top:50px;position:absolute;right:-100px">
+<form method="get" action="" style="width:200px;position:absolute;right:100px">
+<label for="imoney">????? ?????:</label><input class="page2" type="text" name="price" id="cost"><br /><br />
 <label for="iminutes">???? ?????:</label><input class="page2" type="text" name="minutes" id="minutes"><br /><br />
 <label for="isms">????? ?????:</label><input class="page2" type="text" name="sms" id="sms"><br /><br />
 <input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg">
@@ -196,18 +202,18 @@ You already have a great deal
 </td>
 </tr>
 
-<tr class="th">
+<tr class="th ">
 <td>{% trans "cost per month" %}</td>
 <td>{% trans "annual cost" %}</td>
 <td>{% trans "plan name" %}</td>
 </tr>
 {% for plan in plans %} 
-<tr class="packages">
+<tr class="packages largefont">
 <td> {{ plan.0 }} </td>
 <td> {{ plan.1 }} </td> 
 <td> {{ plan.2 }} </td>
 <td> <a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> </td>
-<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i49.tinypic.com/wtdl3m.jpg" alt="????? ?????" /></a></td>
+<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i48.tinypic.com/2nu3aed.jpg" alt="????? ?????" /></a></td>
 </tr>
 {% endfor %} 
 </table>
