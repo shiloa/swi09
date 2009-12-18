@@ -10,7 +10,7 @@
     <div class="greenbox b1">
       <div id="costtop">
         {% trans "how high is" %}<br/>{% trans "your monthly payment?" %}
-        <span class="textbox">{{ form.cost }}</span>
+        <br/><span class="textbox">{{ form.cost }}</span>
       </div>
       <div class="errormsg">
         {% if form.cost.errors %} {% for err in form.cost.errors %}{{ err }}<br/>{% endfor %} {% endif %}

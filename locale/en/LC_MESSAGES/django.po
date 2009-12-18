@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 11:41+0200\n"
+"POT-Creation-Date: 2009-12-18 11:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,56 +88,60 @@ msgstr ""
 msgid "plans"
 msgstr ""
 
-#: templates/plans.tpl:158
+#: templates/plans.tpl:163
 msgid "sucker"
 msgstr ""
 
-#: templates/plans.tpl:160
+#: templates/plans.tpl:165
 msgid "paying a lot"
 msgstr ""
 
-#: templates/plans.tpl:162
+#: templates/plans.tpl:167
 msgid "average"
 msgstr ""
 
-#: templates/plans.tpl:164
+#: templates/plans.tpl:169
 msgid "good deal!"
 msgstr ""
 
-#: templates/plans.tpl:173
+#: templates/plans.tpl:180
 msgid "monthly payment:"
 msgstr ""
 
-#: templates/plans.tpl:174
+#: templates/plans.tpl:181
 msgid "monthly minutes:"
 msgstr ""
 
-#: templates/plans.tpl:175
+#: templates/plans.tpl:182
 msgid "monthyl texts:"
 msgstr ""
 
-#: templates/plans.tpl:185
+#: templates/plans.tpl:192
 msgid "you can save up to "
 msgstr ""
 
-#: templates/plans.tpl:185
+#: templates/plans.tpl:192
 msgid " shekels every month!"
 msgstr ""
 
-#: templates/plans.tpl:187
+#: templates/plans.tpl:194
 msgid "you already have a great deal!"
 msgstr ""
 
-#: templates/plans.tpl:194
+#: templates/plans.tpl:201
 msgid "cost per month"
 msgstr ""
 
-#: templates/plans.tpl:195
+#: templates/plans.tpl:202
 msgid "annual cost"
 msgstr ""
 
-#: templates/plans.tpl:196 theapp/models.py:28
+#: templates/plans.tpl:203 theapp/models.py:28
 msgid "plan name"
+msgstr ""
+
+#: templates/plans.tpl:204
+msgid "operator"
 msgstr ""
 
 #: templates/popup.tpl:69

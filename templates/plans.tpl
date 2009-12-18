@@ -90,7 +90,7 @@ margin-bottom:20px;
 margin-bottom:20px;
         border: 1px solid #666;
         background-color:#CE3918;
-margin-right:93px;
+margin-right:115px;
       }
       
       #ticks {
@@ -161,9 +161,9 @@ font-size:30px;
 <div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
     <div style="position:absolute;right:40px;color:white;font-weight:bold">
       {% trans "sucker" %}
-    <br /><br />
+    <br /><br /><br/>
       {% trans "paying a lot" %}
-    <br />
+    <br /><br/><br/>
       {% trans "average" %}
     <br /><br /><br />
     {% trans "good deal!" %}
@@ -201,6 +201,7 @@ font-size:30px;
 <td>{% trans "cost per month" %}</td>
 <td>{% trans "annual cost" %}</td>
 <td>{% trans "plan name" %}</td>
+<td>{% trans "operator" %}</td>
 </tr>
 {% for plan in plans %} 
 <tr class="packages largefont">
