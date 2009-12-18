@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 10:32+0200\n"
+"POT-Creation-Date: 2009-12-18 11:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,31 +44,31 @@ msgstr ""
 msgid "See you soon!"
 msgstr ""
 
-#: templates/home.tpl:7
+#: templates/home.tpl:8
 msgid "Frayer Meter"
 msgstr "פרייאר-מטר"
 
-#: templates/home.tpl:11
+#: templates/home.tpl:12
 msgid "how high is"
 msgstr "כמה את/ה משלמ/ת"
 
-#: templates/home.tpl:11
+#: templates/home.tpl:12
 msgid "your monthly payment?"
 msgstr "בכל חודש?"
 
-#: templates/home.tpl:21
+#: templates/home.tpl:22
 msgid "how many minutes do"
 msgstr "כמה דקות את/ה"
 
-#: templates/home.tpl:21
+#: templates/home.tpl:22
 msgid "you speak each month?"
 msgstr "מדבר/ת כל חודש?"
 
-#: templates/home.tpl:32
+#: templates/home.tpl:33
 msgid "how many texts"
 msgstr "כמה הודעות טקסט"
 
-#: templates/home.tpl:32
+#: templates/home.tpl:33
 msgid "do you send each month?"
 msgstr "את/ה שולח כל חודש?"
 
@@ -99,6 +99,22 @@ msgstr "עלות שנתית"
 #: templates/plans.tpl:37 theapp/models.py:28
 msgid "plan name"
 msgstr "שם התכנית"
+
+#: templates/popup.tpl:62
+msgid "your phone number:"
+msgstr "מספר הטלפון שלך:"
+
+#: templates/popup.tpl:70
+msgid "send"
+msgstr "שלח/י"
+
+#: templates/popup.tpl:72
+msgid "thanks!"
+msgstr "תודה!"
+
+#: templates/popup.tpl:73
+msgid "close"
+msgstr "סגירה"
 
 #: theapp/models.py:10
 msgid "company name"
