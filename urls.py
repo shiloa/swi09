@@ -17,6 +17,9 @@ urlpatterns = patterns('',
     # Ajax grapths
     (r'^graphs$', 'swi09.theapp.views.graphs', {}, 'home_page'),
     
+    # TEMPAjax grapths
+    (r'^show$', 'swi09.theapp.views.showme', {}, 'home_page'),
+    
     # Ajax grapths
     (r'^plans$', 'swi09.theapp.views.plans', {}, 'home_page'),
     
