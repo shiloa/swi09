@@ -26,8 +26,8 @@ def plans(request):
     if saved < 0:
         saved = 0
 
-    frayer = saved if saved < 100 else 100
-    frayer = 100 - saved
+    frayer = saved if saved < 95 else 95
+    frayer = 95 - frayer 
 
     return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved, 'frayer':frayer }, context_instance=RequestContext(request))
 
@@ -38,7 +38,8 @@ def best_plans(sms, minutes, price):
     for plan in Plan.objects.filter(is_active=True):
         plan_price = plan.my_price(sms, minutes)
         img = themap[plan.company.id]
-        results.append((plan_price, plan_price * 12, plan, price - plan_price if price > plan_price else 0, img))
+        saved = price - plan_price if price > plan_price else 0
+        results.append((plan_price, saved * 12, plan, saved, img))
 
     return sorted(results) [0:4]
 
