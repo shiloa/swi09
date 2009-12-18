@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/static/css/base1.css" type="text/css" media="screen" />
 <form action="" method="post">
   <div class="wrap">
-    <div class="header"><a href=""><img src="http://i48.tinypic.com/24zvp4w.jpg" alt='{% trans "Frayer Meter" %}'></a></div>
+    <div class="header"><a href="{% url home_page %}"><img src="http://i48.tinypic.com/24zvp4w.jpg" alt='{% trans "Frayer Meter" %}'></a></div>
     <img src="http://i47.tinypic.com/zji03n.jpg" class="clock" alt="clock">
     <div class="greenbox b1">
       {# <div id="costtop">מהו גובה התשלום<br />החודשי שלך?</div> #}

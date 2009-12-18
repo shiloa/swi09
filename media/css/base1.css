@@ -39,8 +39,8 @@ position:absolute;
 right:39%;
 }
 .b3 {
-position:absolute;
-right:62%;
+    position:absolute;
+    right:62%;
 }
 #costtop,#minutestop,#smstop {
     height:120px;
@@ -73,7 +73,9 @@ input {
     top:125px;
 }
 .header {
+    clear: both;
     margin-bottom:150px;
+    margin-right: 0;
 }
 .button {
     width:361px;
