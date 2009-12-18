@@ -11,9 +11,9 @@
       <div id="costtop">
         {% trans "how high is" %}<br/>{% trans "your monthly payment?" %}
       </div>
-      <div class="bottom"><label for="imoney">{% trans "monthly payment:" %}</label>
-        {# {{ form.cost }} #}
-        <input type="text" name="cost" id="cost" />
+      <div class="bottom">
+        {{ form.cost }}
+      {% if form.cost.errors %} {% for err in form.cost.errors %} <br> {{ err }} {% endfor %} {% endif %}
       </div>
    </div>
 
@@ -22,9 +22,9 @@
       {% trans "how many minutes" %}<br />{% trans "speak each month?" %}
     </div>
     {# <div id="minutestop">כמה דקות את/ה<br />מדבר/ת בחודש?</div> #}
-    <div class="bottom"><label for="iminutes">{% trans "monthly minutes:" %}</label>
-      {# {{ form.minutes }} #}
-      <input type="text" name="minutes" id="minutes" />
+    <div class="bottom">
+      {{ form.minutes }} 
+      {% if form.minutes.errors %} {% for err in form.minutes.errors %} <br> {{ err }} {% endfor %} {% endif %}
     </div>
   </div>
 
@@ -33,9 +33,9 @@
       {% trans "how many texts" %}<br />{% trans "do you send each month?" %}
     </div>
     {# <div id="smstop">כמה סמסים את/ה<br />שולח/ת בחודש?</div> #}
-    <div class="bottom"><label for="isms">{% trans "monthly texts:" %}</label>
-      {# {{ form.sms }} #}
-      <input type="text" name="sms" id="sms" />
+    <div class="bottom">
+      {{ form.sms }} 
+      {% if form.sms.errors %} {% for err in form.sms.errors %} <br> {{ err }} {% endfor %} {% endif %}
     </div>
   </div>
 
