@@ -128,13 +128,9 @@ font-weight:bold;
 font-size:30px;
 }
 </style>
-<script type="text/javascript" charset="utf-8">
-    $( function(){
-      setTimeout("$('#progress-inner').animate({ height: '30%' }, 3000, 'swing')", 500);
-    });
-  </script>
 </head>
 <body>
+{% include "popup.tpl" %}
 <div class="wrap">
 <div class="header"><a href=""><img src="http://i46.tinypic.com/i3xc8p.jpg" alt="????? ???"></a></div>
 
@@ -160,7 +156,7 @@ font-size:30px;
 
   <div id="progress-inner"></div>
 </div>
-<div style="margin-top:75px;position:absolute;right:-100px"><form method="get" action="">
+<div style="margin-top:50px;position:absolute;right:-100px"><form method="get" action="" style="width:200px;position:absolute;right:100px">
 <label for="imoney">????? ?????:</label><input class="page2" type="text" name="cost" id="cost"><br /><br />
 <label for="iminutes">???? ?????:</label><input class="page2" type="text" name="minutes" id="minutes"><br /><br />
 <label for="isms">????? ?????:</label><input class="page2" type="text" name="sms" id="sms"><br /><br />
@@ -192,7 +188,8 @@ You already have a great deal
 <td> {{ plan.0 }} </td>
 <td> {{ plan.1 }} </td> 
 <td> {{ plan.2 }} </td>
-<td><a href="" onclick="return getNum();"><img src="http://i49.tinypic.com/wtdl3m.jpg" alt="????? ?????" /></a></td>
+<td> <a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> </td>
+<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i49.tinypic.com/wtdl3m.jpg" alt="????? ?????" /></a></td>
 </tr>
 {% endfor %} 
 </table>
@@ -201,16 +198,18 @@ You already have a great deal
 </div>
 </div>
 
+<a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i46.tinypic.com/b66oab.gif" border="0" alt="Image and video hosting by TinyPic"></a>
+<a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i49.tinypic.com/1zvtpj4.gif" border="0" alt="Image and video hosting by TinyPic"></a>
 
 
 {% endblock %}
 
-{% block pagescripts %}
+{% block headme %}
 <script type="text/javascript" src="http://trentrichardson.com/Impromptu/scripts/jquery-impromptu.2.7.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8">
-$( function(){
-        setTimeout("$('#progress-inner').animate({ height: '30%' }, 3000, 'swing')", 500);
-        });
-</script>
+    $( function(){
+      setTimeout("$('#progress-inner').animate({ height: '{{frayer}}%' }, 3000, 'swing')", 500);
+    });
+  </script>
 {% endblock %}
