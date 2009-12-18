@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     (r'^home/$', 'swi09.theapp.views.home_page', {}, 'home_page'),
     
     # under contstruction
-    (r'^$', 'swi09.theapp.views.under_construction', {}, 'home_page'),
+    (r'^$', 'swi09.theapp.views.home_page', {}, 'home_page'),
     
     # Ajax grapths
     (r'^graphs$', 'swi09.theapp.views.graphs', {}, 'home_page'),
@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     (r'^show$', 'swi09.theapp.views.showme', {}, 'home_page'),
     
     # Ajax grapths
-    (r'^plans$', 'swi09.theapp.views.plans', {}, 'home_page'),
+    (r'^plans/$', 'swi09.theapp.views.plans', {}, 'home_page'),
     
     # site media
     (r'^static/(.*)$',  serve, { 'document_root': os.path.join(DOC_ROOT,'media/') }),
