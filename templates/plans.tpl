@@ -17,7 +17,7 @@ width:960px;
 min-height:800px;
 position:relative;
 background-color:white;
-background-image:url(http://i50.tinypic.com/mszx3d.jpg);
+background-image:url(http://i48.tinypic.com/24ossus.jpg); 
 background-repeat:repeat-x;
 }
 img {
@@ -116,9 +116,28 @@ border-width:0px;
 width:64px;
 height:49px;
 }
+
+.th {background-image:none;}
 .th td {
 font-weight:bold;
 }
+table {
+text-align:center;
+}
+tr {
+background-image:url(http://i49.tinypic.com/ir3rcy.jpg);
+background-repeat:repeat-x;
+background-position:center bottom;
+}
+td {
+padding-bottom:10px;
+}
+table {
+cell-spacing:0px;
+border-spacing:0px;
+}
+
+
 table {
 text-align:center;
 }
@@ -132,7 +151,7 @@ font-size:30px;
 <body>
 {% include "popup.tpl" %}
 <div class="wrap">
-<div class="header"><a href=""><img src="http://i46.tinypic.com/i3xc8p.jpg" alt="????? ???"></a></div>
+<div class="header"><a href=""><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
 
 <div style="padding:20px;">
 <div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
@@ -198,8 +217,6 @@ You already have a great deal
 </div>
 </div>
 
-<a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i46.tinypic.com/b66oab.gif" border="0" alt="Image and video hosting by TinyPic"></a>
-<a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i49.tinypic.com/1zvtpj4.gif" border="0" alt="Image and video hosting by TinyPic"></a>
 
 
 {% endblock %}
