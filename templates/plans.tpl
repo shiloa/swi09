@@ -218,7 +218,7 @@ font-size:30px;
 </div>
 </div>
 
-
+<a href="http://twitter.com/?status={% trans 'I just saved ' %}{{saved}}{% trans ' shekels using ' %}%23frayermeter"><img src="http://i46.tinypic.com/10ol4qd.jpg" alt="twitter" /></a> </a>
 
 {% endblock %}
 

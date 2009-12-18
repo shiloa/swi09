@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-18 11:57+0200\n"
+"POT-Creation-Date: 2009-12-18 12:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,6 +143,14 @@ msgstr "שם התכנית"
 #: templates/plans.tpl:204
 msgid "operator"
 msgstr "מפעיל"
+
+#: templates/plans.tpl:221
+msgid "I just saved "
+msgstr "הרגע חסכתי "
+
+#: templates/plans.tpl:221
+msgid " shekels using "
+msgstr " שקלים בחודש  "
 
 #: templates/popup.tpl:69
 msgid "your phone number:"
