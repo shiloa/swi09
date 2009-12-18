@@ -135,7 +135,7 @@ background-repeat:repeat-x;
 background-position:center bottom;
 }
 td {
-padding-bottom:10px;
+padding-bottom:15px;
 }
 table {
 cell-spacing:0px;
@@ -213,7 +213,7 @@ You already have a great deal
 <td> {{ plan.1 }} </td> 
 <td> {{ plan.2 }} </td>
 <td> <a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> </td>
-<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i48.tinypic.com/2nu3aed.jpg" alt="????? ?????" /></a></td>
+<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i48.tinypic.com/2nu3aed.jpg" style="margin-right:10px" alt="????? ?????" /></a></td>
 </tr>
 {% endfor %} 
 </table>
