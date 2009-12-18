@@ -30,9 +30,9 @@ def best_plans(sms, minutes, price):
     results = []
     for plan in Plan.objects.filter(is_active=True):
         plan_price = plan.my_price(sms, minutes)
-        results.append((plan_price, price - plan_price if price > plan_price else 0, plan))
+        results.append((plan_price, plan_price * 12, plan, price - plan_price if price > plan_price else 0))
 
-    return sorted(results) #[0:4]
+    return sorted(results) [0:4]
 
 STEPS = 5
 def graphs(request):

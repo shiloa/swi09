@@ -25,7 +25,7 @@ img {
     padding-top:40px;
     color:white;
     width:230px;
-    height:260px;
+    height:160px;
     background-repeat:no-repeat;
     text-align:center;
     font-weight:bold;
@@ -44,7 +44,7 @@ right:62%;
 }
 #costtop,#minutestop,#smstop {
     height:120px;
-    font-size:22px;
+    font-size:18px;
 }
 input {
     width:40px;
@@ -80,9 +80,28 @@ input {
     height:169px;
     position:absolute;
     left:150px;
-    top:550px;
+    top:590px;
     border-width:0px;
 }
 img {
     border-width:0px;
+}
+input[type=password], input[type=text] {
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+    -moz-border-radius-topleft:4px;
+    -moz-border-radius-topright:4px;
+    border:1px solid #AACCEE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+    color:#666;
+    font-family:'Helvetica';
+    font-size:large;
+    font-size-adjust:none;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:normal;
 }

@@ -25,12 +25,6 @@
         <div id="progress-inner"></div>
       </div>
       <div>
-        <form method="get" action="">
-          <label for="imoney">{% trans "monthly payment:" %}</label><input type="text" name="cost" id="cost"><br /><br />
-          <label for="iminutes">{% trans "monthly mintues:" %}</label><input type="text" name="minutes" id="minutes"><br /><br />
-          <label for="isms">{% trans "monthly texts:" %}</label><input type="text" name="sms" id="sms"><br /><br />
-          <input type="image" name="send" id="send" src="http://i46.tinypic.com/d5e0p.jpg" />
-        </form>
       </div>
     </div>
   
@@ -41,13 +35,16 @@
           <td>{% trans "cost per month" %}</td>
           <td>{% trans "annual cost" %}</td>
           <td>{% trans "plan name" %}</td>
-        </tr> 
-        <tr>
-          <td>200</td>
-          <td>600</td>
-          <td>סלקום שמנמנים</td>
-          <td><a href=""><img src="http://i45.tinypic.com/2va1e1c.jpg" alt="הירשם וחסוך" /></a></td>
         </tr>
+{% for plan in plans %} 
+<tr>
+<td> {{ plan.0 }} </td>
+<td> {{ plan.1 }} </td> 
+<td> {{ plan.2 }} </td>
+<td><a href=""><img src="http://i45.tinypic.com/2va1e1c.jpg" alt="הירשם וחסוך" /></a></td>
+<tr>
+ {% endfor %} 
+ 
       </table>
     </div>
 
