@@ -124,7 +124,7 @@ font-weight:bold;
 table {
 text-align:center;
 }
-tr {
+tr.packages {
 background-image:url(http://i49.tinypic.com/ir3rcy.jpg);
 background-repeat:repeat-x;
 background-position:center bottom;
@@ -184,7 +184,7 @@ font-size:30px;
 </div>
 <div style="position:absolute;right:300px;top:230px;width:600px">
 <table style="width:100%;">
-<tr>
+<tr class="th">
 <td colspan=4>
 <h2>
 {% if saved %}
@@ -201,9 +201,8 @@ You already have a great deal
 <td>{% trans "annual cost" %}</td>
 <td>{% trans "plan name" %}</td>
 </tr>
-<tr>
 {% for plan in plans %} 
-<tr>
+<tr class="packages">
 <td> {{ plan.0 }} </td>
 <td> {{ plan.1 }} </td> 
 <td> {{ plan.2 }} </td>

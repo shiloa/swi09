@@ -27,7 +27,7 @@ def plans(request):
         saved = 0
 
     frayer = saved if saved < 100 else 100
-    frayer = 100 - saved
+    frayer = 100 - frayer 
 
     return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved, 'frayer':frayer }, context_instance=RequestContext(request))
 
