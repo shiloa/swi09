@@ -86,12 +86,31 @@ class Step(models.Model):
         ordering = ['classification']
 
 
+class ContactRequest(models.Model):
+    ''' Request by User to be contacted '''
+    STATE = (
+            (0, "Logged"),
+            (1, "Passed to Agent"),
+    )        
+
+    minutes = models.PositiveIntegerField()
+    sms = models.PositiveIntegerField()
+    cost = models.PositiveIntegerField()
+
+    phone = models.PositiveIntegerField(blank=True)
+    date = models.DateField()
+
+    state = models.SmallIntegerField(choices=STATE)
+
+    def __unicode__(self):
+        return u'Minutes: %d SMS: %d Cost: %d Phone: %d %s' % (self.minutes, self.sms, self.cost, self.phone, self.date)
+
 class UserInfo(models.Model):
     ''' User usage information '''
     minutes = models.PositiveIntegerField()
     sms = models.PositiveIntegerField()
     cost = models.PositiveIntegerField()
-
+    
     phone = models.PositiveIntegerField(null=True, blank=True)
 
     def __unicode__(self):

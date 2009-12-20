@@ -55,7 +55,15 @@
       $('#disclaimer').fadeOut(1000);
       $('.close').fadeOut(1000);
       $(this).fadeOut(1000);
-      setTimeout("$('#thanks').fadeIn();", 1000);
+      var data = "phone=" + $("#phone").val() + "&minutes={{locals.minutes}}&sms={{locals.sms}}&cost={{locals.price}}";
+      $.ajax({
+       type: "POST",
+       url: "/save_req",
+       data: data,
+       success: function(msg){
+        $('#thanks').fadeIn();
+       }
+     });
     });
     
     $('.close').click(function (){
@@ -64,26 +72,21 @@
   });
 </script>
 {% load i18n %}
-<div id="popup"  style="display: none;">
+
+<div id="popup" style="display: none;">
   <table id="send-table" border="0" cellspacing="5" cellpadding="5">
-    <tr>
-      <th>{% trans "your phone number:" %}</th>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="phone" value="" id="phone" />
-      </td>
-    </tr>
+    <tr> <th>{% trans "your phone number:" %}</th> </tr>
+    <tr> <td> <input type="text" name="phone" value="" id="phone" /> </td> </tr>
   </table>
+
   <a href="#" class="link-button close">{% trans "close" %}</a>    
   <a href="#" id="sendit" class="link-button">{% trans "send" %}</a>    
-  <div id="disclaimer">
-    {% trans "(we will <b>NEVER</b> abuse your number)" %}
-  </div>   
+
+  <div id="disclaimer"> {% trans "(we will <b>NEVER</b> abuse your number)" %} </div>   
+
   <div id="thanks" style="display: none;">
     <span id="thanks-text">{% trans "thanks!" %}</span>
     <a href="#" class="link-button close">{% trans "close" %}</a>    
- 
   </div>
 
 </div>

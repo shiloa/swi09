@@ -5,6 +5,8 @@ from pdb import set_trace as debugger
 from swi09.theapp.forms import UserInfoForm
 from swi09.theapp.models import *
 from decimal import Decimal
+import datetime
+
 def plans(request):
 
     if request.method != 'GET':
@@ -29,7 +31,7 @@ def plans(request):
     frayer = saved if saved < 95 else 95
     frayer = 95 - frayer 
 
-    return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved, 'frayer':frayer }, context_instance=RequestContext(request))
+    return render_to_response('plans.tpl', {'plans':plans, 'price':price, 'saved':saved, 'frayer':frayer, 'locals':locals() }, context_instance=RequestContext(request))
 
 
 def best_plans(sms, minutes, price):
@@ -42,6 +44,23 @@ def best_plans(sms, minutes, price):
         results.append((plan_price, saved * 12, plan, saved, img))
 
     return sorted(results) [0:4]
+
+def save_req(request):
+
+    if not request.method == 'POST':
+        raise Http404
+
+    try:
+        phone   = int(request.POST.get("phone", "fail"))
+        sms     = int(request.POST.get("sms", "fail"))
+        minutes = int(request.POST.get("minutes", "fail"))
+        cost    = int(request.POST.get("cost", "fail"))
+    except ValueError:
+        raise Http404
+
+    ContactRequest(phone=phone, minutes=minutes, sms=sms, cost=cost, date=datetime.datetime.now(), state=0).save()
+
+    return HttpResponse("Done")
 
 STEPS = 5
 def graphs(request):

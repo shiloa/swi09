@@ -27,16 +27,17 @@
 <script src="http://cdn.survey.io/embed/1.0/survey.js" type="text/javascript"></script>
 <script type="text/javascript" charset="utf-8">
 Surveyio.init({
-    survey_id: "47c0e",
-    token: "61cad51ef68d9116bccf2f003c36467510490c50",
-    banner: {
-        x: "right",
-        y: "top",
-        color: "orange"
-    }
+	survey_id: "47c0e",
+	token: "61cad51ef68d9116bccf2f003c36467510490c50",
+	banner: {
+		x: "right",
+		y: "top",
+		color: "orange"
+	}
 });
 </script>
 <!-- /End Survey.io code -->
+
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
