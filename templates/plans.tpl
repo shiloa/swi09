@@ -164,7 +164,7 @@ font-size:30px;
                     <td colspan=4>
                         <h2>
                             {% if saved %}
-                                {% trans "you can save up to " %}{{ saved }}{% trans " shekels every month!" %}
+                                {% trans "you can save up to " %}{{ saved|floatformat:"-2"  }}{% trans " shekels every month!" %}
                             {% else %}
                                 {% trans "you already have a great deal!" %}
                             {% endif %}
@@ -179,8 +179,8 @@ font-size:30px;
                 </tr>
                 {% for plan in plans %} 
                 <tr class="packages largefont">
-                    <td> {{ plan.0 }} </td>
-                    <td> {{ plan.1 }} </td> 
+                    <td> {{ plan.0|floatformat:"-2" }} </td>
+                    <td> {{ plan.1|floatformat:"-2" }} </td> 
                     <td> {{ plan.2 }} </td>
                     <td> <a href="http://tinypic.com" target="_blank">
                         <img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> 
@@ -227,7 +227,7 @@ font-size:30px;
 </div>
 
 <div style="margin:auto;width:100px;">
-    <a href="http://twitter.com/?status={% trans 'I just saved ' %}{{saved}}{% trans ' shekels using ' %}%23frayermeter">
+    <a href="http://twitter.com/?status={% trans 'I just saved ' %}{{saved|floatformat:"-2" }}{% trans ' shekels using ' %}%23frayermeter">
         <img src="http://i46.tinypic.com/10ol4qd.jpg" alt="twitter" />
     </a> 
 </div>
