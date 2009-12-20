@@ -14,8 +14,7 @@ font-family:Arial;
 div.wrap {
 margin:auto;
 width:960px;
-min-height:800px;
-position:relative;
+height:850px;
 background-color:white;
 background-image:url(http://i48.tinypic.com/24ossus.jpg); 
 background-repeat:repeat-x;
@@ -138,7 +137,6 @@ td {
 padding-bottom:15px;
 }
 table {
-cell-spacing:0px;
 border-spacing:0px;
 }
 
@@ -154,82 +152,85 @@ font-size:30px;
 </style>
 {% include "popup.tpl" %}
 {% load i18n %}
+
 <div class="wrap">
-<div class="header"><a href="{% url home_page %}"><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
+    <div class="header"><a href="{% url home_page %}"><img src="http://i46.tinypic.com/2cqfrjr.jpg" alt="????? ???"></a></div>
 
-<div style="padding:20px;">
-<div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
-    <div style="position:absolute;right:40px;color:white;font-weight:bold" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %}>
-      {% trans "sucker" %}
-    <br /><br /><br/>
-      {% trans "paying a lot" %}
-    <br /><br/><br/>
-      {% trans "average" %}
-    <br /><br /><br />
-    {% trans "good deal!" %}
+    <div style="padding:0px 20px 0px 20px;">
 
+        <div style="right:300px;top:0px;width:600px;float:left">
+            <table style="width:100%;">
+                <tr class="th">
+                    <td colspan=4>
+                        <h2>
+                            {% if saved %}
+                                {% trans "you can save up to " %}{{ saved }}{% trans " shekels every month!" %}
+                            {% else %}
+                                {% trans "you already have a great deal!" %}
+                            {% endif %}
+                        </h2>
+                    </td>
+                </tr>
+                <tr class="th ">
+                    <td>{% trans "cost per month" %}</td>
+                    <td>{% trans "annual cost" %}</td>
+                    <td>{% trans "plan name" %}</td>
+                    <td>{% trans "operator" %}</td>
+                </tr>
+                {% for plan in plans %} 
+                <tr class="packages largefont">
+                    <td> {{ plan.0 }} </td>
+                    <td> {{ plan.1 }} </td> 
+                    <td> {{ plan.2 }} </td>
+                    <td> <a href="http://tinypic.com" target="_blank">
+                        <img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> 
+                    </td>
+                    <td><a href="#"  onclick="$('#popup').fadeIn();">
+                        <img src="http://i48.tinypic.com/2nu3aed.jpg" style="margin-right:10px" alt="????? ?????" /></a>
+                    </td>
+                </tr>
+                {% endfor %} 
+            </table>
+        </div>
+
+
+        <div style="background-image:url(http://i48.tinypic.com/2q812tx.jpg);background-repeat:no-repeat;background-position:right top;padding-top:70px;height:525px">
+            <div style="position:absolute;right:40px;color:white;font-weight:bold" {% if not LANGUAGE_BIDI %}style="font-size: smaller;" dir="ltr"{% endif %}>
+                {% trans "sucker" %}
+                <br /><br /><br/>
+                {% trans "paying a lot" %}
+                <br /><br/><br/>
+                {% trans "average" %}
+                <br /><br /><br />
+                {% trans "good deal!" %}
+            </div>
+
+            <div id="progress" style="margin-left: 5em;">
+                <div id="progress-inner">
+                </div>
+            </div>
+
+            <div style="margin-top:50px;position:absolute;right:-100px;display:inline">
+                <form method="get" action="" style="width:200px;position:absolute;right:100px">
+                <label for="imoney"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}> {% trans "shekels/mo." %} </label>
+                <input class="page2" type="text" name="price" id="cost" /><br /><br /> 
+                <label for="iminutes"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}> {% trans "minutes/mo." %} </label>
+                <input class="page2" type="text" name="minutes" id="minutes" />
+                <br /><br />
+                <label for="isms"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}> {% trans "texts/mo." %} </label>
+                <input class="page2" type="text" name="sms" id="sms" />
+                <br /><br />
+                <input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg" />
+            </div>
+        </div>
     </div>
-
-<div id="progress" style="margin-left: 5em;">
-
-  <div id="progress-inner"></div>
 </div>
 
-<div style="margin-top:50px;position:absolute;right:-100px">
-<form method="get" action="" style="width:200px;position:absolute;right:100px">
-<label for="imoney"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
-  {% trans "shekels/mo." %}
-</label>
-<input class="page2" type="text" name="price" id="cost" /><br /><br />
-<label for="iminutes"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
-  {% trans "minutes/mo." %}
-</label>
-<input class="page2" type="text" name="minutes" id="minutes" />
-<br /><br />
-<label for="isms"{% if not LANGUAGE_BIDI %}style="font-size: smaller; text-align: left;" dir="ltr"{% endif %}>
-  {% trans "texts/mo." %}
-</label>
-<input class="page2" type="text" name="sms" id="sms" />
-<br /><br />
-<input type="image" name="send" id="send" src="http://i46.tinypic.com/2zegn7b.jpg" />
+<div style="margin:auto;width:100px;">
+    <a href="http://twitter.com/?status={% trans 'I just saved ' %}{{saved}}{% trans ' shekels using ' %}%23frayermeter">
+        <img src="http://i46.tinypic.com/10ol4qd.jpg" alt="twitter" />
+    </a> 
 </div>
-</div>
-<div style="position:absolute;right:300px;top:230px;width:600px">
-<table style="width:100%;">
-<tr class="th">
-<td colspan=4>
-<h2>
-{% if saved %}
-{% trans "you can save up to " %}{{ saved }}{% trans " shekels every month!" %}
-{% else %}
-{% trans "you already have a great deal!" %}
-{% endif %}
-</h2>
-</td>
-</tr>
-
-<tr class="th ">
-<td>{% trans "cost per month" %}</td>
-<td>{% trans "annual cost" %}</td>
-<td>{% trans "plan name" %}</td>
-<td>{% trans "operator" %}</td>
-</tr>
-{% for plan in plans %} 
-<tr class="packages largefont">
-<td> {{ plan.0 }} </td>
-<td> {{ plan.1 }} </td> 
-<td> {{ plan.2 }} </td>
-<td> <a href="http://tinypic.com" target="_blank"><img width="32" height="32" src="http://i48.tinypic.com/{{ plan.4 }}" border="0" alt="Image and video hosting by TinyPic"></a> </td>
-<td><a href="#"  onclick="$('#popup').fadeIn();"><img src="http://i48.tinypic.com/2nu3aed.jpg" style="margin-right:10px" alt="????? ?????" /></a></td>
-</tr>
-{% endfor %} 
-</table>
-
-</div>
-</div>
-</div>
-
-<a href="http://twitter.com/?status={% trans 'I just saved ' %}{{saved}}{% trans ' shekels using ' %}%23frayermeter"><img src="http://i46.tinypic.com/10ol4qd.jpg" alt="twitter" /></a> </a>
 
 {% endblock %}
 
@@ -241,5 +242,5 @@ font-size:30px;
       setTimeout("$('#progress-inner').fadeIn(200);", 100);
       setTimeout("$('#progress-inner').animate({ height: '{{frayer}}%' }, 3000, 'swing')", 500);
     });
-  </script>
+</script>
 {% endblock %}
