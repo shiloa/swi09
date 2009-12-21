@@ -141,6 +141,9 @@ def under_construction(request):
     """the classic 'site is under construction' page"""
     return render_to_response('construction.tpl', context_instance=RequestContext(request))
 
+def about_page(request):
+    """the details/about page"""
+    return render_to_response('about.tpl', context_instance=RequestContext(request))
 
 def force_language(request, lang_code):
     """force language code into session"""
