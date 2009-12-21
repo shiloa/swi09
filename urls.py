@@ -11,6 +11,9 @@ urlpatterns = patterns('',
     # site root url
     (r'^home/$', 'swi09.theapp.views.home_page', {}, 'fake_home_page'),
     
+    # added about page
+    (r'^about/$', 'swi09.theapp.views.about_page', {}, 'about_page'),
+    
     # under contstruction
     (r'^$', 'swi09.theapp.views.home_page', {}, 'home_page'),
     
