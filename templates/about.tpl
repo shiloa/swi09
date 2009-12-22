@@ -76,8 +76,8 @@
       </tr>
     </tbody>
   </table>
-<br/>
-<a href="/">Back home</a>
+<br/> 
+<a href="{% url home_page %}">Back home</a>
 <br/>
 </div>
 {% endblock %}
