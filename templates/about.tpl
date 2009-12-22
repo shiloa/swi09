@@ -7,6 +7,7 @@
     width: 70%;
     border: 1px solid #bfbfbf;
     text-align: center;
+    padding:10px;
   }
 
   #title {
@@ -34,46 +35,49 @@
   <table dir="ltr">
     <tbody>
       <tr>
-        <td class="thename">Boris Dinkevich</td>
+        <td class="thename"><a href="mailto:boris@dinkevich.com">Boris Dinkevich</a></td>
         <td class="tiny">backend ninja</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><a href="http://twitter.com/BorisDinkevich">@BorisDinkevich</a></td>
       </tr>
       <tr>
         <td class="thename">Nissim Bar-Siman-Tov</td>
-        <td class="tiny">market research</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td class="tiny">product development</td>
+        <td><!--<a href="http://twitter.com/username">@username</a>--></td>
       </tr>
       <tr>
-        <td class="thename">Oren Yomtov</td>
-        <td class="tiny">HTML/JS master</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td class="thename"><a href="mailto:thenameisoren@gmail.com">Oren Yomtov</a></td>
+        <td class="tiny">frontend ninja</td>
+        <td><a href="http://twitter.com/orenyomtov">@orenyomtov</a></td>
       </tr>
       <tr>
-        <td class="thename">Ran Erlich</td>
+        <td class="thename"><a href="mailto:ranerlich@gmail.com">Ran Erlich</a></td>
         <td class="tiny">the man with the plan</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><!--<a href="http://twitter.com/username">@username</a>--></td>
       </tr>
       <tr>
-        <td class="thename">Romi Shamai</td>
+        <td class="thename"><a href="mailto:romi@baabua.co.il">Romi Shamai</a></td>
         <td class="tiny">ui/user experience</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><a href="http://twitter.com/romish">@romish</a></td>
       </tr>
       <tr>
-        <td class="thename">Shai Davis</td>
+        <td class="thename"><a href="mailto:shaidavis@gmail.com">Shai Davis</a></td>
         <td class="tiny">graphic design expert</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><!--<a href="http://twitter.com/username">@username</a>--></td>
       </tr>
       <tr>
         <td class="thename">Shilo Ayalon</td>
         <td class="tiny">db and backend</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><a href="http://twitter.com/shiloa">@shiloa</a></td>
       </tr>
       <tr>
-        <td class="thename">Yifat Hadaya</td>
+        <td class="thename"><a href="mailto:yifat.hadaya@gmail.com">Yifat Hadaya</a></td>
         <td class="tiny">marketing and branding</td>
-        <td><a href="http://twitter.com/username">@username</a></td>
+        <td><!--<a href="http://twitter.com/username">@username</a>--></td>
       </tr>
     </tbody>
   </table>
+<br/>
+<a href="/">Back home</a>
+<br/>
 </div>
 {% endblock %}

@@ -22,6 +22,7 @@
 {% block footer %} <div id="footer"></div> {% endblock %}
 
 {% include "languages.tpl" %}
+<a href="/about/">about</a>
 
 <!-- Begin Survey.io code for . -->
 <script src="http://cdn.survey.io/embed/1.0/survey.js" type="text/javascript"></script>
