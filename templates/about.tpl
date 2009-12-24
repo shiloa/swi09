@@ -35,7 +35,7 @@
   <table dir="ltr">
     <tbody>
       <tr>
-        <td class="thename"><a href="mailto:boris@dinkevich.com">Boris Dinkevich</a></td>
+        <td class="thename"><a href="www.dinkevich.com">Boris Dinkevich</a></td>
         <td class="tiny">backend ninja</td>
         <td><a href="http://twitter.com/BorisDinkevich">@BorisDinkevich</a></td>
       </tr>
